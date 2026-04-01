@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+  <!-- 元数据 -->
+  <meta charset="utf-8">
+  
+  
+  <title>古典密码（二） | Hexo</title>
+  <link rel="canonical" href="http://example.com/2026/03/31/2026-03-31-%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81%EF%BC%88%E4%BA%8C%EF%BC%89/">
+  <meta name="author" content="John Doe" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="robots" content="index,follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="format-detection" content="telphone=no, email=no" />
+  
+    <meta name="keywords" content="hill密码, 仿射密码, 古典密码, 维吉尼亚密码" />
+  
+  <meta name="description" content="古典密码">
+<meta property="og:type" content="article">
+<meta property="og:title" content="古典密码（二）">
+<meta property="og:url" content="http://example.com/2026/03/31/2026-03-31-%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81%EF%BC%88%E4%BA%8C%EF%BC%89/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="古典密码">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-03-31T02:00:00.000Z">
+<meta property="article:modified_time" content="2026-04-01T05:58:59.388Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="hill密码">
+<meta property="article:tag" content="仿射密码">
+<meta property="article:tag" content="古典密码">
+<meta property="article:tag" content="维吉尼亚密码">
+<meta name="twitter:card" content="summary">
+  
+  <!-- 样式表文件 -->
+  <link rel="stylesheet" id="kratos-css" href="/css/kr-core.min.css" media="all"></link>
+  
+    <link rel="stylesheet" id="highlight-css" href="/css/highlight/highlight.js/night-eighties.min.css" media="all"></link>
+  
+  <link rel="stylesheet" id="theme-light-css" href="/css/kr-theme/light.min.css" media="all"></link>
+  <link rel="stylesheet" id="theme-dark-css" href="/css/kr-theme/dark.min.css" media="(prefers-color-scheme: dark)"></link>
+  <script src="/js/kr-theme.min.js"></script>
+  <link rel="stylesheet" id="fontawe-css" href="/vendors/font-awesome@4.7.0/css/font-awesome.min.css" media="all"></link>
+  
+    <link rel="stylesheet" id="nprogress-css" href="/vendors/nprogress@0.2.0/nprogress.css" media="all"></link>
+  
+  
+    <link rel="stylesheet" href="/vendors/viewerjs@1.11.6/dist/viewer.min.css"></link>
+  
+  <!-- 不得不预先加载的一些JS文件 -->
+  
+    <script src="/vendors/qr-code-styling@1.6.0-rc.1/lib/qr-code-styling.js"></script>
+  
+  <!-- 自定义站点横幅和背景 -->
+  <style>
+    
+      .kratos-cover.kratos-cover-2 {
+        background-image: url('');
+      }
+      html[data-theme="dark"] .kratos-cover.kratos-cover-2 {
+        background-image: url('');
+      }
+    
+    
+      @media(min-width:768px) {
+        body.custom-background {
+          background-image: url('');
+        }
+        html[data-theme="dark"] body.custom-background {
+          background-image: url('');
+        }
+      }
+    
+    
+      .widget-kratos-about .photo-background {
+        background-image: url('/images/default.webp');
+      }
+      html[data-theme="dark"] .widget-kratos-about .photo-background {
+        background-image: url('/images/default.webp');
+      }
+    
+  </style>
+
+  <!-- 额外的追加注入项 -->
+  
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+    <body class="custom-background">
+        <div id="kratos-wrapper">
+    <div id="kratos-page">
+        <div id="kratos-header">
+            <header id="kratos-desktop-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="nav-header">
+                        <nav id="kratos-menu-wrap">
+                            <ul id="kratos-primary-menu" class="sf-menu">
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <header id="kratos-mobile-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="color-logo"><a href="/">Hexo</a></div>
+                    <div id="kratos-nav-toggle-wrapper" class="nav-toggle">
+                        <a id="kratos-nav-toggle" class="kratos-nav-toggle">
+                            <i></i>
+                        </a>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="kratos-start kratos-hero-2">
+            <!-- <div class="kratos-overlay"></div> -->
+            <div class="kratos-cover kratos-cover-2 text-center">
+                <div class="desc desc2 animate-box">
+                    <a href="/">
+                        <h2>Hexo</h2> <br />
+                        <span></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="kratos-blog-post">
+            <div class="container">
+                <div id="main" class="row">
+
+
+        
+
+            
+
+            <section class="kr-main-col col-md-8">
+
+        
+
+            <article itemscope itemtype="https://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2026/03/31/2026-03-31-%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81%EF%BC%88%E4%BA%8C%EF%BC%89/">
+    <div class="kratos-hentry kratos-page-inner clearfix">
+        <header class="kratos-page-header">
+            
+                <h1 class="kratos-page-title text-center" itemprop="name headline">古典密码（二）</h1>
+            
+            <ul class="kratos-page-meta text-center">
+                <li><time datetime="2026-03-31T02:00:00.000Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2026-03-31</time></li>
+                <li itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <i class="fa fa-user"></i> 作者 <span itemprop="name">John Doe</span>
+                </li>
+                
+                    <li>
+                        <i class="fa fa-edit"></i> 
+                        
+                        
+                            ~5.18K
+                        
+                        字
+                    </li>
+                
+                
+                
+            </ul>
+        </header>
+        <div class="kratos-page-content kr-post">
+            
+            
+            
+            <hr />
+            <div itemprop="articleBody"><h1 id="1-维吉尼亚密码（Vigenere-Cipher）"><a href="#1-维吉尼亚密码（Vigenere-Cipher）" class="headerlink" title="1.维吉尼亚密码（Vigenère Cipher）"></a>1.维吉尼亚密码（Vigenère Cipher）</h1><p>维吉尼亚密码是一种经典的<strong>多表替换密码</strong>，通过一串密钥字母来循环控制每一位明文的移位长度，从而有效抵御简单的频率分析攻击。</p>
+<h2 id="1-1加密原理"><a href="#1-1加密原理" class="headerlink" title="1.1加密原理"></a>1.1加密原理</h2><p>（1）选取一个密钥单词，将其循环扩展至与明文等长。<br>（2）对每一位明文字母$m_i$和对应密钥字母$k_i$,加密公式为:</p>
+<p>$c_i&#x3D;(m_i+k_i)mod26$</p>
+<p>（3）字谜对应数值：A&#x3D;0,B&#x3D;1,…,Z&#x3D;25</p>
+<p>（4）最终将计算结果转回字母，得到密文</p>
+<h2 id="1-2解密原理"><a href="#1-2解密原理" class="headerlink" title="1.2解密原理"></a>1.2解密原理</h2><p>解密是加密的逆过程，使用相同密钥，将移位反向：</p>
+<p>$m_i&#x3D;(c_i-k_i)mod26$</p>
+<p>再转回字母即可恢复明文。</p>
+<h2 id="1-3特点"><a href="#1-3特点" class="headerlink" title="1.3特点"></a>1.3特点</h2><ul>
+<li>相比凯撒密码更安全，同一个明文字母会被加密成不同密文字母。</li>
+<li>密钥越长，安全性越高。</li>
+<li>可通过卡西斯基试验、重合指数法进行破解。</li>
+</ul>
+<h2 id="1-4加解密代码"><a href="#1-4加解密代码" class="headerlink" title="1.4加解密代码"></a>1.4加解密代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">vigenere</span>(<span class="params">text, key, mode=<span class="string">&#x27;encrypt&#x27;</span></span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;维吉尼亚密码加解密</span></span><br><span class="line"><span class="string">    mode: &#x27;encrypt&#x27; 加密, &#x27;decrypt&#x27; 解密</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    result = []</span><br><span class="line">    key_len = <span class="built_in">len</span>(key)</span><br><span class="line">    key = key.upper()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i, ch <span class="keyword">in</span> <span class="built_in">enumerate</span>(text):</span><br><span class="line">        <span class="keyword">if</span> ch.isalpha():</span><br><span class="line">            <span class="comment"># 确定大小写基准</span></span><br><span class="line">            base = <span class="built_in">ord</span>(<span class="string">&#x27;A&#x27;</span>) <span class="keyword">if</span> ch.isupper() <span class="keyword">else</span> <span class="built_in">ord</span>(<span class="string">&#x27;a&#x27;</span>)<span class="comment">#确保解密后字母大小写与原明文一致</span></span><br><span class="line">            <span class="comment"># 获取密钥移位值</span></span><br><span class="line">            shift = <span class="built_in">ord</span>(key[i % key_len]) - <span class="built_in">ord</span>(<span class="string">&#x27;A&#x27;</span>)</span><br><span class="line">            <span class="keyword">if</span> mode == <span class="string">&#x27;encrypt&#x27;</span>:</span><br><span class="line">                shifted = (<span class="built_in">ord</span>(ch) - base + shift) % <span class="number">26</span></span><br><span class="line">            <span class="keyword">else</span>:  <span class="comment">#mode=&#x27;decrypt&#x27;</span></span><br><span class="line">                shifted = (<span class="built_in">ord</span>(ch) - base - shift) % <span class="number">26</span></span><br><span class="line">            result.append(<span class="built_in">chr</span>(base + shifted))</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            result.append(ch)  <span class="comment">#非字母不变</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">&#x27;&#x27;</span>.join(result)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用示例</span></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    plaintext = <span class="built_in">input</span>(<span class="string">&quot;请输入待加密明文：&quot;</span>)</span><br><span class="line">    key = <span class="string">&quot;KEY&quot;</span></span><br><span class="line">    ciphertext = vigenere(plaintext, key, <span class="string">&#x27;encrypt&#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;密文: <span class="subst">&#123;ciphertext&#125;</span>&quot;</span>)</span><br><span class="line">    decrypted = vigenere(ciphertext, key, <span class="string">&#x27;decrypt&#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;解密: <span class="subst">&#123;decrypted&#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h1 id="2-仿射密码（Affine-Cipher）"><a href="#2-仿射密码（Affine-Cipher）" class="headerlink" title="2.仿射密码（Affine Cipher）"></a>2.仿射密码（Affine Cipher）</h1><p>仿射密码是一种<strong>线性替换密码</strong>，通过一次函数对字母进行加密，结合了乘法与加法操作，是凯撒密码的推广形式。</p>
+<h2 id="2-1加密原理"><a href="#2-1加密原理" class="headerlink" title="2.1加密原理"></a>2.1加密原理</h2><p>加密公式：</p>
+<p>$c&#x3D;(am+b)mod26$</p>
+<ul>
+<li><p>m：明文字母对应数字</p>
+</li>
+<li><p>a,b：密钥，a 必须与 26 互质（gcd(a,26)&#x3D;1）</p>
+</li>
+<li><p>c：密文字母对应数字</p>
+</li>
+</ul>
+<h2 id="2-2解密原理"><a href="#2-2解密原理" class="headerlink" title="2.2解密原理"></a>2.2解密原理</h2><p>解密需要先求 a 在模 26 下的乘法逆元$a^{-1}$，满足：</p>
+<p>$a*a^{-1}&#x3D;1 (mod26)$</p>
+<p>解密公式：</p>
+<p>$m&#x3D;a^{-1}*(c-b)mod 26$</p>
+<p>计算后转回字母得到明文。</p>
+<h2 id="2-3特点"><a href="#2-3特点" class="headerlink" title="2.3特点"></a>2.3特点</h2><ul>
+<li><p>结构简单、计算高效。</p>
+</li>
+<li><p>密钥空间较小，容易暴力破解。</p>
+</li>
+<li><p>是现代线性密码思想的古典雏形。</p>
+</li>
+</ul>
+<h2 id="2-4加解密代码"><a href="#2-4加解密代码" class="headerlink" title="2.4加解密代码"></a>2.4加解密代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> math</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">AffineCipher</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, a, b</span>):</span><br><span class="line">        <span class="keyword">if</span> math.gcd(a,<span class="number">26</span>) != <span class="number">1</span>:</span><br><span class="line">            <span class="keyword">raise</span> ValueError(<span class="string">&quot;a必须与26互质&quot;</span>)</span><br><span class="line">        <span class="variable language_">self</span>.a = a</span><br><span class="line">        <span class="variable language_">self</span>.b = b</span><br><span class="line">        <span class="variable language_">self</span>.a_inv=<span class="built_in">pow</span>(a,-<span class="number">1</span>,<span class="number">26</span>)<span class="comment">#计算a的逆元</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">encrypt</span>(<span class="params">self, text</span>):</span><br><span class="line">        result = <span class="string">&quot;&quot;</span></span><br><span class="line">        <span class="keyword">for</span> ch <span class="keyword">in</span> text.upper():</span><br><span class="line">            <span class="keyword">if</span> ch.isalpha():</span><br><span class="line">                x = <span class="built_in">ord</span>(ch) - <span class="built_in">ord</span>(<span class="string">&#x27;A&#x27;</span>)</span><br><span class="line">                y = (<span class="variable language_">self</span>.a * x + <span class="variable language_">self</span>.b) % <span class="number">26</span></span><br><span class="line">                result += <span class="built_in">chr</span>(y + <span class="built_in">ord</span>(<span class="string">&#x27;A&#x27;</span>))</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                result += ch</span><br><span class="line">        <span class="keyword">return</span> result</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">decrypt</span>(<span class="params">self, text</span>):</span><br><span class="line">        result = <span class="string">&quot;&quot;</span></span><br><span class="line">        <span class="keyword">for</span> ch <span class="keyword">in</span> text.upper():</span><br><span class="line">            <span class="keyword">if</span> ch.isalpha():</span><br><span class="line">                y = <span class="built_in">ord</span>(ch) - <span class="built_in">ord</span>(<span class="string">&#x27;A&#x27;</span>)</span><br><span class="line">                x = (<span class="variable language_">self</span>.a_inv * (y - <span class="variable language_">self</span>.b)) % <span class="number">26</span></span><br><span class="line">                result += <span class="built_in">chr</span>(x + <span class="built_in">ord</span>(<span class="string">&#x27;A&#x27;</span>))</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                result += ch</span><br><span class="line">        <span class="keyword">return</span> result</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用示例</span></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    a=<span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;a:&quot;</span>))</span><br><span class="line">    b=<span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;b:&quot;</span>))</span><br><span class="line">    cipher = AffineCipher(a, b)</span><br><span class="line">    <span class="comment"># 加密</span></span><br><span class="line">    plain =<span class="built_in">input</span>(<span class="string">&quot;请输入要加密的明文:&quot;</span>)</span><br><span class="line">    encrypted = cipher.encrypt(plain)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;明文: <span class="subst">&#123;plain&#125;</span>&quot;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;密文: <span class="subst">&#123;encrypted&#125;</span>&quot;</span>)</span><br><span class="line">    <span class="comment"># 解密</span></span><br><span class="line">    decrypted = cipher.decrypt(encrypted)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;解密: <span class="subst">&#123;decrypted&#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h1 id="3-Hill密码（Hill-Cipher）"><a href="#3-Hill密码（Hill-Cipher）" class="headerlink" title="3.Hill密码（Hill Cipher）"></a>3.Hill密码（Hill Cipher）</h1><p>Hill 密码由 Lester S. Hill 在 1929 年提出，是<strong>首个基于矩阵线性变换</strong>的古典密码，以分组为单位加密，能够更好地混淆字母频率。</p>
+<h2 id="3-1加密原理"><a href="#3-1加密原理" class="headerlink" title="3.1加密原理"></a>3.1加密原理</h2><p>（1）将明文按 <strong>n 个字母一组</strong> 分组，不足补字母（如 X）。</p>
+<p>（2）选取一个 <strong>n×n 可逆矩阵 K</strong> 作为密钥。</p>
+<p>（3）每组明文构成列向量 M，加密：</p>
+<p> $C&#x3D;K*M mod26$</p>
+<p>（4）结果向量 C 即为对应密文。</p>
+<h2 id="3-2解密原理"><a href="#3-2解密原理" class="headerlink" title="3.2解密原理"></a>3.2解密原理</h2><p>求密钥矩阵 K 在模 26 下的逆矩阵$K^{-1}$。</p>
+<p>使用逆矩阵解密：</p>
+<p>$M&#x3D;K^{-1}*C mod26$</p>
+<p>恢复明文向量并转回字母。</p>
+<h2 id="3-3特点"><a href="#3-3特点" class="headerlink" title="3.3特点"></a>3.3特点</h2><ul>
+<li><p>首次引入矩阵与线性代数到密码中。</p>
+</li>
+<li><p>能够同时加密多个字母，打乱单字母频率。</p>
+</li>
+<li><p>已知明文攻击下较脆弱。</p>
+</li>
+</ul>
+<h2 id="3-4加解密代码"><a href="#3-4加解密代码" class="headerlink" title="3.4加解密代码"></a>3.4加解密代码</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="comment"># 字母转数字</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">c2n</span>(<span class="params">c</span>):</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">ord</span>(c) - <span class="built_in">ord</span>(<span class="string">&#x27;A&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 数字转字母</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">n2c</span>(<span class="params">n</span>):</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">chr</span>(n + <span class="built_in">ord</span>(<span class="string">&#x27;A&#x27;</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 加密</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">encrypt</span>(<span class="params">text, key</span>):</span><br><span class="line">    n = <span class="built_in">len</span>(key)  <span class="comment"># 密钥矩阵大小，即矩阵阶数</span></span><br><span class="line">    text = text.upper().replace(<span class="string">&#x27; &#x27;</span>, <span class="string">&#x27;&#x27;</span>) <span class="comment">#将空格删除</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 明文分组中每组元素个数必须等于密钥矩阵列数n,故填充X使明文长度为n的倍数</span></span><br><span class="line">    <span class="keyword">while</span> <span class="built_in">len</span>(text) % n != <span class="number">0</span>:</span><br><span class="line">        text += <span class="string">&#x27;X&#x27;</span></span><br><span class="line"></span><br><span class="line">    result = <span class="string">&quot;&quot;</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, <span class="built_in">len</span>(text), n): <span class="comment">#步长为n,开始循环</span></span><br><span class="line">        <span class="comment"># 取出n个字母转成数字向量</span></span><br><span class="line">        vec = np.array([[c2n(ch)] <span class="keyword">for</span> ch <span class="keyword">in</span> text[i:i + n]])</span><br><span class="line">        <span class="comment"># 加密：密钥×向量 mod 26</span></span><br><span class="line">        enc = np.dot(key, vec) % <span class="number">26</span></span><br><span class="line">        <span class="comment"># 转回字母</span></span><br><span class="line">        result += <span class="string">&#x27;&#x27;</span>.join(n2c(<span class="built_in">int</span>(x)) <span class="keyword">for</span> x <span class="keyword">in</span> enc.flatten())<span class="comment">#将[[x], [y]]转回成[x, y]</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> result</span><br><span class="line"></span><br><span class="line"><span class="comment"># 解密</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">decrypt</span>(<span class="params">text, key</span>):</span><br><span class="line">    n = <span class="built_in">len</span>(key)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 求逆矩阵（模26）</span></span><br><span class="line">    det = <span class="built_in">int</span>(<span class="built_in">round</span>(np.linalg.det(key)))<span class="comment"># 行列式</span></span><br><span class="line">    det_inv = <span class="built_in">pow</span>(det % <span class="number">26</span>, -<span class="number">1</span>, <span class="number">26</span>)  <span class="comment"># 模逆</span></span><br><span class="line">    inv_key = (np.<span class="built_in">round</span>(np.linalg.inv(key) * det).astype(<span class="built_in">int</span>) * det_inv) % <span class="number">26</span></span><br><span class="line"></span><br><span class="line">    result = <span class="string">&quot;&quot;</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, <span class="built_in">len</span>(text), n):</span><br><span class="line">        vec = np.array([[c2n(ch)] <span class="keyword">for</span> ch <span class="keyword">in</span> text[i:i + n]])</span><br><span class="line">        dec = np.dot(inv_key, vec) % <span class="number">26</span></span><br><span class="line">        result += <span class="string">&#x27;&#x27;</span>.join(n2c(<span class="built_in">int</span>(x)) <span class="keyword">for</span> x <span class="keyword">in</span> dec.flatten())</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> result</span><br><span class="line"></span><br><span class="line"><span class="comment">#示例</span></span><br><span class="line">key = np.array([[<span class="number">3</span>, <span class="number">2</span>], [<span class="number">5</span>, <span class="number">7</span>]])  <span class="comment"># 2x2密钥</span></span><br><span class="line">plain = <span class="string">&quot;HELLO&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;明文: <span class="subst">&#123;plain&#125;</span>&quot;</span>)</span><br><span class="line">cipher = encrypt(plain, key)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;密文: <span class="subst">&#123;cipher&#125;</span>&quot;</span>)</span><br><span class="line">decrypted = decrypt(cipher, key)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;解密: <span class="subst">&#123;decrypted&#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure></div>
+        </div>
+        
+        <footer class="kratos-entry-footer clearfix">
+            
+            
+            
+                <div class="post-actions text-center clearfix" id="post-actions">
+                
+                    <a class="donate" href="javascript:;" onclick="krOpenDonateModal()"><i class="fa fa-bitcoin"></i> 打赏</a>
+                
+                
+                    <a class="share" href="javascript:;" onclick="krOpenShareModal()"><i class="fa fa-share-alt"></i> 分享</a>
+                
+                </div>
+            
+            <div class="footer-tag clearfix">
+                <div class="pull-left">
+                <i class="fa fa-tags"></i>
+                    <a class="tag-none-link" href="/tags/hill%E5%AF%86%E7%A0%81/" rel="tag">hill密码</a>, <a class="tag-none-link" href="/tags/%E4%BB%BF%E5%B0%84%E5%AF%86%E7%A0%81/" rel="tag">仿射密码</a>, <a class="tag-none-link" href="/tags/%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81/" rel="tag">古典密码</a>, <a class="tag-none-link" href="/tags/%E7%BB%B4%E5%90%89%E5%B0%BC%E4%BA%9A%E5%AF%86%E7%A0%81/" rel="tag">维吉尼亚密码</a>
+                </div>
+                <div class="pull-date">
+                    <time datetime="2026-04-01T05:58:59.388Z" itemprop="dateModified">最后编辑：2026-04-01</time>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+        <nav class="navigation post-navigation clearfix" role="navigation">
+            
+            <div class="nav-previous clearfix">
+                <a title=" 古典密码（一）" href="/2026/03/29/2026-03-29-古典密码（一）/"><i class="fa fa-angle-left"></i> 上一篇</a>
+            </div>
+            
+            
+            <div class="nav-next clearfix">
+                <a title=" polarisctf" href="/2026/04/01/polarisctf/">下一篇 <i class="fa fa-angle-right"></i></a>
+            </div>
+            
+        </nav>
+    
+    
+</article>
+
+        
+
+            </section>
+
+            
+                
+
+<section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
+    <!-- 文章和页面根据splitter来分割，没有的话就从头开始设置为sticky -->
+    
+        <div class="sticky-area">
+    
+    
+    </div>
+</section>
+            
+
+        
+
+                </div>
+    </div>
+</div>
+
+<footer>
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 footer-list text-center">
+                    <ul class="kratos-social-icons">
+                        
+                    </ul>
+                    <ul class="kratos-copyright">
+                        <div>
+                            <li>&copy; 2026 Hexo 版权所有.</li>
+                            <li>本站已运行<span id="kr-since">Loading...</span></li>
+                        </div>
+                        <div>
+                            <li>自豪地使用 <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a> 主题</li>
+                            <li>站点由 John Doe 用 <i class="fa fa-heart" style="color:#d43f57"></i> 搭建</li>
+                        </div>
+                        <!-- 额外的追加注入项 -->
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="kr-tool text-center">
+            <div class="tool">
+                
+                    <div class="box search-box">
+                        <a href="/search">
+                            <span class="fa fa-search"></span>
+                        </a>
+                    </div>
+                
+                <div class="box theme-box" id="theme-toggle">
+                    <span class="fa fa-adjust"></span>
+                </div>
+            </div>
+            <div id="gotop-box" class="box gotop-box">
+                <span class="fa fa-chevron-up"></span>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+</div>
+
+
+    <div id="kr-donate-modal" class="kr-modal">
+    <div class="kr-modal-bg" onclick="krCloseDonateModal()"></div>
+    <div class="kr-modal-content">
+        <div class="kr-modal-header">
+            <div class="kr-modal-icon">
+                <i class="fa fa-bitcoin"></i>
+            </div>
+            <div class="kr-modal-title">打赏</div>
+            <button class="kr-modal-close" onclick="krCloseDonateModal()">
+                <i class="fa fa-times-circle"></i>
+            </button>
+        </div>
+        <div class="kr-modal-body">
+            <div class="kr-donate-message">打赏提示信息</div>
+            <div class="kr-donate-qr" id="kr-donate-qr">
+                
+            </div>
+            <div class="kr-donate-platforms">
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script defer src="/js/kr-modal/donate.min.js"></script>
+
+
+
+
+    <div id="kr-share-modal" class="kr-modal">
+    <div class="kr-modal-bg" onclick="krCloseShareModal()"></div>
+    <div class="kr-modal-content">
+        <div class="kr-modal-header">
+            <div class="kr-modal-icon">
+                <i class="fa fa-share-alt"></i>
+            </div>
+            <div class="kr-modal-title">分享</div>
+            <button class="kr-modal-close" onclick="krCloseShareModal()">
+                <i class="fa fa-times-circle"></i>
+            </button>
+        </div>
+        <div class="kr-modal-body">
+            <div class="kr-share-message">分享提示信息</div>
+            <div class="kr-share-qr" id="kr-share-qr"></div>
+            <div class="kr-share-platforms">
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script defer src="/js/kr-modal/share.min.js"></script>
+
+
+
+<!-- 额外的追加注入项 -->
+
+
+        <script>
+    if (!window.kr) {
+        window.kr = {};
+    }
+    window.kr.notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));
+    window.kr.siteRoot = "/";
+</script>
+
+
+  <script defer src="/vendors/nprogress@0.2.0/nprogress.js"></script>
+
+
+
+  <script defer src="/vendors/viewerjs@1.11.6/dist/viewer.min.js"></script>
+
+
+<script defer src="/js/kr-core.min.js"></script>
+
+
+  <script defer src="/js/kr-pjax.min.js"></script>
+
+
+<!-- 额外的追加注入项 -->
+
+
+    </body>
+</html>
