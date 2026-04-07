@@ -1,23 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-  <!-- 元数据 -->
+  <!DOCTYPE html>
+  <html lang="en"  
+      data-theme-mode="auto"
+  >
+  <head>
   <meta charset="utf-8">
   
   
-  <title>古典密码（二） | Hexo</title>
-  <link rel="canonical" href="http://example.com/2026/03/31/2026-03-31-%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81%EF%BC%88%E4%BA%8C%EF%BC%89/">
-  <meta name="author" content="John Doe" />
-  <meta http-equiv="Cache-Control" content="no-transform" />
-  <meta http-equiv="Cache-Control" content="no-siteapp" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="robots" content="index,follow" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-  <meta name="format-detection" content="telphone=no, email=no" />
   
-    <meta name="keywords" content="hill密码, 仿射密码, 古典密码, 维吉尼亚密码" />
-  
-  <meta name="description" content="古典密码">
+  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_a0oqhord1y';window.REIMU_CONFIG.clipboard_tips = {"success":{"en":"Copy successfully (*^▽^*)"},"fail":{"en":"Copy failed (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":false,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = 'All articles on this blog are licensed under the BY-NC-SA license agreement unless otherwise stated. Please indicate the source when reprinting!';window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'http://example.com';</script>
+  <title>
+    古典密码（二） | Hexo
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic|Noto Serif SC:400,400italic,700,700italic&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic|Noto Serif SC:400,400italic,700,700italic&display=swap" media="print" onload="this.media='all'">
+    <link rel="preload" href="//at.alicdn.com/t/c/font_4552607_a0oqhord1y.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    
+<link rel="stylesheet" href="/css/loader.css">
+
+    <meta name="description" content="古典密码">
 <meta property="og:type" content="article">
 <meta property="og:title" content="古典密码（二）">
 <meta property="og:url" content="http://example.com/2026/03/31/2026-03-31-%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81%EF%BC%88%E4%BA%8C%EF%BC%89/index.html">
@@ -32,154 +32,205 @@
 <meta property="article:tag" content="古典密码">
 <meta property="article:tag" content="维吉尼亚密码">
 <meta name="twitter:card" content="summary">
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="shortcut icon" href="/images/favicon.ico">
   
-  <!-- JSON-LD 结构化数据 -->
-  
-  
-    <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"BlogPosting","headline":"古典密码（二）","description":"古典密码","image":"http://example.com/images/user.svg","author":{"@type":"Person","name":"John Doe"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"http://example.com/images/user.svg"}},"datePublished":"2026-03-31T02:00:00.000Z","dateModified":"2026-04-01T05:58:59.388Z","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2026/03/31/2026-03-31-%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81%EF%BC%88%E4%BA%8C%EF%BC%89/"}}
-    </script>
-  
-  <!-- 关键 CSS 预加载 -->
-  <link rel="preload" href="/css/kr-core.min.css" as="style" crossorigin>
-  <link rel="preload" href="/css/kr-theme/light.min.css" as="style" crossorigin>
-  <link rel="preload" href="/css/kr-theme/dark.min.css" as="style" crossorigin>
-  <!-- 样式表文件 -->
-  <link rel="stylesheet" id="kratos-css" href="/css/kr-core.min.css" media="all">
-  <link rel="stylesheet" id="theme-light-css" href="/css/kr-theme/light.min.css" media="all">
-  <link rel="stylesheet" id="theme-dark-css" href="/css/kr-theme/dark.min.css" media="(prefers-color-scheme: dark)">
-  
-    <link rel="stylesheet"  id="highlight-css" href="/css/highlight/highlight.js/night-eighties.min.css" media="print" onload="this.media='all'" onerror="this.media='all'"><noscript><link rel="stylesheet" href="/css/highlight/highlight.js/night-eighties.min.css"></noscript>
-  
-  <script src="/js/kr-theme.min.js"></script>
-  <link rel="stylesheet"  id="fontawe-css" href="/vendors/font-awesome@4.7.0/css/font-awesome.min.css" media="print" onload="this.media='all'" onerror="this.media='all'"><noscript><link rel="stylesheet" href="/vendors/font-awesome@4.7.0/css/font-awesome.min.css"></noscript>
-  
-    <link rel="stylesheet"  id="nprogress-css" href="/vendors/nprogress@0.2.0/nprogress.css" media="print" onload="this.media='all'" onerror="this.media='all'"><noscript><link rel="stylesheet" href="/vendors/nprogress@0.2.0/nprogress.css"></noscript>
-  
-  
-    <link rel="stylesheet"  href="/vendors/viewerjs@1.11.6/dist/viewer.min.css" media="print" onload="this.media='all'" onerror="this.media='all'"><noscript><link rel="stylesheet" href="/vendors/viewerjs@1.11.6/dist/viewer.min.css"></noscript>
-  
-  <!-- 预先加载的JS文件 -->
-  
-    <script src="/vendors/qr-code-styling@1.6.0-rc.1/lib/qr-code-styling.js"></script>
-  
-  <!-- 自定义站点横幅和背景 -->
-  <style>
-    
-      .kratos-cover.kratos-cover-2 {
-        background-image: url('');
-      }
-      html[data-theme="dark"] .kratos-cover.kratos-cover-2 {
-        background-image: url('');
-      }
-    
-    
-      @media(min-width:768px) {
-        body.custom-background {
-          background-image: url('');
-        }
-        html[data-theme="dark"] body.custom-background {
-          background-image: url('');
-        }
-      }
-    
-    
-      .widget-kratos-about .photo-background {
-        background-image: url('/images/default.webp');
-      }
-      html[data-theme="dark"] .widget-kratos-about .photo-background {
-        background-image: url('/images/default.webp');
-      }
-    
-  </style>
+<link rel="stylesheet" href="/css/style.css">
 
-  <!-- 额外的追加注入项 -->
-  
+  <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.css" integrity="sha384-IfxC36XL/toUyJ939C73PcgMuRzAZuIzZxE38drsmO5p6jD7ei+Zx/1oA/0l8ysE" crossorigin="anonymous">
+    
+<script src="https://npm.webcache.cn/pace-js@1.2.4/pace.min.js" integrity="sha384-k6YtvFUEIuEFBdrLKJ3YAUbBki333tj1CSUisai5Cswsg9wcLNaPzsTHDswp4Az8" crossorigin="anonymous"></script>
+
+    
+<link rel="stylesheet" href="https://npm.webcache.cn/@reimujs/aos@0.1.2/dist/aos.css" integrity="sha384-GMRP93c6Hkz9JVKGAuRR3nTS7M07RwPgTFenXiosjq2VbVgvdDNcz1g6Mkj8AONa" crossorigin="anonymous">
+
 <meta name="generator" content="Hexo 8.1.1"></head>
 
-    <body class="custom-background">
-        <div id="kratos-wrapper">
-    <div id="kratos-page">
-        <div id="kratos-header">
-            <header id="kratos-desktop-topnav" class="kratos-topnav">
-                <div class="container">
-                    <div class="nav-header">
-                        <nav id="kratos-menu-wrap">
-                            <ul id="kratos-primary-menu" class="sf-menu">
-                                
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </header>
-            <header id="kratos-mobile-topnav" class="kratos-topnav">
-                <div class="container">
-                    <div class="color-logo"><a href="/">Hexo</a></div>
-                    <div id="kratos-nav-toggle-wrapper" class="nav-toggle">
-                        <a id="kratos-nav-toggle" class="kratos-nav-toggle">
-                            <i></i>
-                        </a>
-                    </div>
-                </div>
-            </header>
-        </div>
-        <div class="kratos-start kratos-hero-2">
-            <!-- <div class="kratos-overlay"></div> -->
-            <div class="kratos-cover kratos-cover-2 text-center">
-                <div class="desc desc2 animate-box">
-                    <a href="/">
-                        <h2>Hexo</h2> <br />
-                        <span></span>
-                    </a>
-                </div>
+  <body>
+      <div id='loader'>
+    <div class="loading-left-bg loading-bg"></div>
+    <div class="loading-right-bg loading-bg"></div>
+    <div class="spinner-box">
+      <div class="loading-taichi rotate">
+          <svg width="150" height="150" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="https://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
+            <path d="M303.5 432A80 80 0 0 1 291.5 592A80 80 0 0 1 303.5 432z" fill="var(--red-1, #ff5252)" />
+            <path d="M512 65A447 447 0 0 1 512 959L512 929A417 417 0 0 0 512 95A417 417 0 0 0 512 929L512 959A447 447 0 0 1 512 65z 
+           M512 95A417 417 0 0 1 929 512A208.5 208.5 0 0 1 720.5 720.5L720.5 592A80 80 0 0 0 720.5 432A80 80 0 0 0 720.5 592L720.5 720.5A208.5 208.5 0 0 1 512 512A208.5 208.5 0 0 0 303.5 303.5A208.5 208.5 0 0 0 95 512A417 417 0 0 1 512 95z" fill="var(--red-1, #ff5252)" />
+          </svg>
+      </div>
+      <div class="loading-word">Loading...</div>
+    </div>
+  </div>
+  <script>
+    var time = null;
+    var loaderEl = document.getElementById('loader');
+    var startLoading = () => {
+      time = Date.now();
+      loaderEl.classList.remove("loading");
+    }
+    var hideLoader = () => {
+      document.body.style.overflow = 'auto';
+      loader.classList.add('loading');
+    };
+
+    var endLoading = () => {
+      if (!time) {
+        hideLoader();
+      } else {
+        if (Date.now() - time > 500) {
+          time = null;
+          hideLoader();
+        } else {
+          setTimeout(endLoading, 500 - (Date.now() - time));
+          time = null;
+        }
+      }
+    }
+    window.addEventListener('DOMContentLoaded', endLoading);
+    loaderEl.addEventListener('click', endLoading);
+  </script>
+<div id="copy-tooltip"></div>
+<div id="heatmap-tooltip"></div>
+
+
+    <div id="container">
+      <div id="wrap">
+        <div id="header-nav">
+  <nav id="main-nav" aria-label="Primary navigation">
+        <a class="main-nav-link-wrap" href="/">
+            <div class="main-nav-icon icon rotate">
+                &#xe62b;
             </div>
-        </div>
+          <span class="main-nav-link">Home</span>
+        </a>
+        <a class="main-nav-link-wrap" href="/archives">
+            <div class="main-nav-icon icon rotate">
+                &#xe62b;
+            </div>
+          <span class="main-nav-link">Archives</span>
+        </a>
+        <a class="main-nav-link-wrap" href="/about">
+            <div class="main-nav-icon icon rotate">
+                &#xe62b;
+            </div>
+          <span class="main-nav-link">About</span>
+        </a>
+        <a class="main-nav-link-wrap" href="/friend">
+            <div class="main-nav-icon icon rotate">
+                &#xe62b;
+            </div>
+          <span class="main-nav-link">Friend</span>
+        </a>
+    <a id="main-nav-toggle" class="nav-icon" aria-label="Toggle navigation" role="button"></a>
+  </nav>
+  <nav id="sub-nav" aria-label="Secondary navigation">
+      <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed" aria-label="RSS Feed" target="_blank"></a>
+  </nav>
+</div>
+<header id="header" aria-label="Site header">
+        <picture>
+        </picture>
+          <img  fetchpriority="high" src="/images/banner.webp" alt="古典密码（二）">
+  <div id="header-outer">
+    <div id="header-title">
+          <span id="logo">
+            <h1 data-aos="slide-up">古典密码（二）</h1>
+          </span>
+        <h2 id="subtitle-wrap" data-aos="slide-down">
+        </h2>
+    </div>
+  </div>
+</header>
 
-        <div id="kratos-blog-post">
-            <div class="container">
-                <div id="main" class="row">
+        <div id="content" aria-label="Page content"  class="sidebar-right" >
+          <aside id="sidebar" aria-label="Sidebar">
+  <div class="sidebar-wrapper-container sticky">
+  <div class="sidebar-wrapper">
+    <div class="sidebar-wrap" data-aos="fade-up">
+          <div class="sidebar-toc-sidebar"><h3 class="toc-title">Contents</h3>
+<div class="sidebar-toc-wrapper toc-div-class" >
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-%E7%BB%B4%E5%90%89%E5%B0%BC%E4%BA%9A%E5%AF%86%E7%A0%81%EF%BC%88Vigenere-Cipher%EF%BC%89"><span class="toc-number">1.</span> <span class="toc-text">1.维吉尼亚密码（Vigenère Cipher）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1%E5%8A%A0%E5%AF%86%E5%8E%9F%E7%90%86"><span class="toc-number">1.1.</span> <span class="toc-text">1.1加密原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2%E8%A7%A3%E5%AF%86%E5%8E%9F%E7%90%86"><span class="toc-number">1.2.</span> <span class="toc-text">1.2解密原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3%E7%89%B9%E7%82%B9"><span class="toc-number">1.3.</span> <span class="toc-text">1.3特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4%E5%8A%A0%E8%A7%A3%E5%AF%86%E4%BB%A3%E7%A0%81"><span class="toc-number">1.4.</span> <span class="toc-text">1.4加解密代码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-%E4%BB%BF%E5%B0%84%E5%AF%86%E7%A0%81%EF%BC%88Affine-Cipher%EF%BC%89"><span class="toc-number">2.</span> <span class="toc-text">2.仿射密码（Affine Cipher）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1%E5%8A%A0%E5%AF%86%E5%8E%9F%E7%90%86"><span class="toc-number">2.1.</span> <span class="toc-text">2.1加密原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2%E8%A7%A3%E5%AF%86%E5%8E%9F%E7%90%86"><span class="toc-number">2.2.</span> <span class="toc-text">2.2解密原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3%E7%89%B9%E7%82%B9"><span class="toc-number">2.3.</span> <span class="toc-text">2.3特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4%E5%8A%A0%E8%A7%A3%E5%AF%86%E4%BB%A3%E7%A0%81"><span class="toc-number">2.4.</span> <span class="toc-text">2.4加解密代码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-Hill%E5%AF%86%E7%A0%81%EF%BC%88Hill-Cipher%EF%BC%89"><span class="toc-number">3.</span> <span class="toc-text">3.Hill密码（Hill Cipher）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1%E5%8A%A0%E5%AF%86%E5%8E%9F%E7%90%86"><span class="toc-number">3.1.</span> <span class="toc-text">3.1加密原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2%E8%A7%A3%E5%AF%86%E5%8E%9F%E7%90%86"><span class="toc-number">3.2.</span> <span class="toc-text">3.2解密原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3%E7%89%B9%E7%82%B9"><span class="toc-number">3.3.</span> <span class="toc-text">3.3特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-4%E5%8A%A0%E8%A7%A3%E5%AF%86%E4%BB%A3%E7%A0%81"><span class="toc-number">3.4.</span> <span class="toc-text">3.4加解密代码</span></a></li></ol></li></ol>
+</div>
+</div>
+          <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+  <img data-src="/avatar/avatar.webp" data-sizes="auto" alt="John Doe" class="lazyload">
+  <div class="sidebar-author-name">John Doe</div>
+  <div class="sidebar-description"></div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>Post</div>
+    <div class="sidebar-state-number">4</div>
+  </div>
+  <div class="sidebar-state-category">
+    <div>Category</div>
+    <div class="sidebar-state-number">3</div>
+  </div>
+  <div class="sidebar-state-tag">
+    <div>Tag</div>
+    <div class="sidebar-state-number">11</div>
+  </div>
+</div>
+<div class="sidebar-social" >
+</div>
+<div class="sidebar-menu">
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/" aria-label="Home"></a>
+          <div class="sidebar-menu-icon icon rotate">
+              &#xe62b;
+          </div>
+        <div class="sidebar-menu-link">Home</div>
+      </div>
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/archives" aria-label="Archives"></a>
+          <div class="sidebar-menu-icon icon rotate">
+              &#xe62b;
+          </div>
+        <div class="sidebar-menu-link">Archives</div>
+      </div>
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/about" aria-label="About"></a>
+          <div class="sidebar-menu-icon icon rotate">
+              &#xe62b;
+          </div>
+        <div class="sidebar-menu-link">About</div>
+      </div>
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/friend" aria-label="Friend"></a>
+          <div class="sidebar-menu-icon icon rotate">
+              &#xe62b;
+          </div>
+        <div class="sidebar-menu-link">Friend</div>
+      </div>
+</div>
+</div>
+          <div class="sidebar-btn-wrapper" style="position:static">
+            <div class="sidebar-toc-btn current"></div>
+            <div class="sidebar-common-btn"></div>
+          </div>
+    </div>
+  </div>
+  <div class="sidebar-widget">
+  </div>
+  </div>
+</aside>
 
+          <section id="main" aria-label="Main content"><article id="post-2026-03-31-古典密码（二）" class="h-entry article" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-inner" data-aos="fade-up">
+    <div class="article-meta">
+      <div class="article-date">
+  <span class="article-date-link icon-calendar" data-aos="zoom-in">
+    <time datetime="2026-03-31T02:00:00.000Z" itemprop="datePublished">2026-03-31</time>
+    <time style="display: none;" id="post-update-time">2026-04-01</time>
+  </span>
+</div>
 
-        
-
-            
-
-            <section class="kr-main-col col-md-8">
-
-        
-
-            <article itemscope itemtype="https://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2026/03/31/2026-03-31-%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81%EF%BC%88%E4%BA%8C%EF%BC%89/">
-    <div class="kratos-hentry kratos-page-inner clearfix">
-        <header class="kratos-page-header">
-            
-                <h1 class="kratos-page-title text-center" itemprop="name headline">古典密码（二）</h1>
-            
-            <ul class="kratos-page-meta text-center">
-                <li><time datetime="2026-03-31T02:00:00.000Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2026-03-31</time></li>
-                <li itemprop="author" itemscope itemtype="https://schema.org/Person">
-                    <i class="fa fa-user"></i> 作者 <span itemprop="name">John Doe</span>
-                </li>
-                
-                    <li>
-                        <i class="fa fa-edit"></i> 
-                        
-                        
-                            ~5.18K
-                        
-                        字
-                    </li>
-                
-                
-                
-            </ul>
-        </header>
-        <div class="kratos-page-content kr-post">
-            
-            
-            
-            <hr />
-            <div itemprop="articleBody"><h1 id="1-维吉尼亚密码（Vigenere-Cipher）"><a href="#1-维吉尼亚密码（Vigenere-Cipher）" class="headerlink" title="1.维吉尼亚密码（Vigenère Cipher）"></a>1.维吉尼亚密码（Vigenère Cipher）</h1><p>维吉尼亚密码是一种经典的<strong>多表替换密码</strong>，通过一串密钥字母来循环控制每一位明文的移位长度，从而有效抵御简单的频率分析攻击。</p>
+    </div>
+    
+    <div class="hr-line"></div>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+        <h1 id="1-维吉尼亚密码（Vigenere-Cipher）"><a href="#1-维吉尼亚密码（Vigenere-Cipher）" class="headerlink" title="1.维吉尼亚密码（Vigenère Cipher）"></a>1.维吉尼亚密码（Vigenère Cipher）</h1><p>维吉尼亚密码是一种经典的<strong>多表替换密码</strong>，通过一串密钥字母来循环控制每一位明文的移位长度，从而有效抵御简单的频率分析攻击。</p>
 <h2 id="1-1加密原理"><a href="#1-1加密原理" class="headerlink" title="1.1加密原理"></a>1.1加密原理</h2><p>（1）选取一个密钥单词，将其循环扩展至与明文等长。<br>（2）对每一位明文字母$m_i$和对应密钥字母$k_i$,加密公式为:</p>
 <p>$c_i&#x3D;(m_i+k_i)mod26$</p>
 <p>（3）字谜对应数值：A&#x3D;0,B&#x3D;1,…,Z&#x3D;25</p>
@@ -240,201 +291,275 @@
 </ul>
 <h2 id="3-4加解密代码"><a href="#3-4加解密代码" class="headerlink" title="3.4加解密代码"></a>3.4加解密代码</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="comment"># 字母转数字</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">c2n</span>(<span class="params">c</span>):</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">ord</span>(c) - <span class="built_in">ord</span>(<span class="string">&#x27;A&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 数字转字母</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">n2c</span>(<span class="params">n</span>):</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">chr</span>(n + <span class="built_in">ord</span>(<span class="string">&#x27;A&#x27;</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 加密</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">encrypt</span>(<span class="params">text, key</span>):</span><br><span class="line">    n = <span class="built_in">len</span>(key)  <span class="comment"># 密钥矩阵大小，即矩阵阶数</span></span><br><span class="line">    text = text.upper().replace(<span class="string">&#x27; &#x27;</span>, <span class="string">&#x27;&#x27;</span>) <span class="comment">#将空格删除</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 明文分组中每组元素个数必须等于密钥矩阵列数n,故填充X使明文长度为n的倍数</span></span><br><span class="line">    <span class="keyword">while</span> <span class="built_in">len</span>(text) % n != <span class="number">0</span>:</span><br><span class="line">        text += <span class="string">&#x27;X&#x27;</span></span><br><span class="line"></span><br><span class="line">    result = <span class="string">&quot;&quot;</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, <span class="built_in">len</span>(text), n): <span class="comment">#步长为n,开始循环</span></span><br><span class="line">        <span class="comment"># 取出n个字母转成数字向量</span></span><br><span class="line">        vec = np.array([[c2n(ch)] <span class="keyword">for</span> ch <span class="keyword">in</span> text[i:i + n]])</span><br><span class="line">        <span class="comment"># 加密：密钥×向量 mod 26</span></span><br><span class="line">        enc = np.dot(key, vec) % <span class="number">26</span></span><br><span class="line">        <span class="comment"># 转回字母</span></span><br><span class="line">        result += <span class="string">&#x27;&#x27;</span>.join(n2c(<span class="built_in">int</span>(x)) <span class="keyword">for</span> x <span class="keyword">in</span> enc.flatten())<span class="comment">#将[[x], [y]]转回成[x, y]</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> result</span><br><span class="line"></span><br><span class="line"><span class="comment"># 解密</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">decrypt</span>(<span class="params">text, key</span>):</span><br><span class="line">    n = <span class="built_in">len</span>(key)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 求逆矩阵（模26）</span></span><br><span class="line">    det = <span class="built_in">int</span>(<span class="built_in">round</span>(np.linalg.det(key)))<span class="comment"># 行列式</span></span><br><span class="line">    det_inv = <span class="built_in">pow</span>(det % <span class="number">26</span>, -<span class="number">1</span>, <span class="number">26</span>)  <span class="comment"># 模逆</span></span><br><span class="line">    inv_key = (np.<span class="built_in">round</span>(np.linalg.inv(key) * det).astype(<span class="built_in">int</span>) * det_inv) % <span class="number">26</span></span><br><span class="line"></span><br><span class="line">    result = <span class="string">&quot;&quot;</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, <span class="built_in">len</span>(text), n):</span><br><span class="line">        vec = np.array([[c2n(ch)] <span class="keyword">for</span> ch <span class="keyword">in</span> text[i:i + n]])</span><br><span class="line">        dec = np.dot(inv_key, vec) % <span class="number">26</span></span><br><span class="line">        result += <span class="string">&#x27;&#x27;</span>.join(n2c(<span class="built_in">int</span>(x)) <span class="keyword">for</span> x <span class="keyword">in</span> dec.flatten())</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> result</span><br><span class="line"></span><br><span class="line"><span class="comment">#示例</span></span><br><span class="line">key = np.array([[<span class="number">3</span>, <span class="number">2</span>], [<span class="number">5</span>, <span class="number">7</span>]])  <span class="comment"># 2x2密钥</span></span><br><span class="line">plain = <span class="string">&quot;HELLO&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;明文: <span class="subst">&#123;plain&#125;</span>&quot;</span>)</span><br><span class="line">cipher = encrypt(plain, key)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;密文: <span class="subst">&#123;cipher&#125;</span>&quot;</span>)</span><br><span class="line">decrypted = decrypt(cipher, key)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;解密: <span class="subst">&#123;decrypted&#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure></div>
-        </div>
-        
-        <footer class="kratos-entry-footer clearfix">
-            
-            
-            
-                <div class="post-actions text-center clearfix" id="post-actions">
-                
-                    <a class="donate" href="javascript:;" onclick="krOpenDonateModal()"><i class="fa fa-bitcoin"></i> 打赏</a>
-                
-                
-                    <a class="share" href="javascript:;" onclick="krOpenShareModal()"><i class="fa fa-share-alt"></i> 分享</a>
-                
-                </div>
-            
-            <div class="footer-tag clearfix">
-                <div class="pull-left">
-                <i class="fa fa-tags"></i>
-                    <a class="tag-none-link" href="/tags/hill%E5%AF%86%E7%A0%81/" rel="tag">hill密码</a>, <a class="tag-none-link" href="/tags/%E4%BB%BF%E5%B0%84%E5%AF%86%E7%A0%81/" rel="tag">仿射密码</a>, <a class="tag-none-link" href="/tags/%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81/" rel="tag">古典密码</a>, <a class="tag-none-link" href="/tags/%E7%BB%B4%E5%90%89%E5%B0%BC%E4%BA%9A%E5%AF%86%E7%A0%81/" rel="tag">维吉尼亚密码</a>
-                </div>
-                <div class="pull-date">
-                    <time datetime="2026-04-01T05:58:59.388Z" itemprop="dateModified">最后编辑：2026-04-01</time>
-                </div>
-            </div>
-        </footer>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="comment"># 字母转数字</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">c2n</span>(<span class="params">c</span>):</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">ord</span>(c) - <span class="built_in">ord</span>(<span class="string">&#x27;A&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 数字转字母</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">n2c</span>(<span class="params">n</span>):</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">chr</span>(n + <span class="built_in">ord</span>(<span class="string">&#x27;A&#x27;</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 加密</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">encrypt</span>(<span class="params">text, key</span>):</span><br><span class="line">    n = <span class="built_in">len</span>(key)  <span class="comment"># 密钥矩阵大小，即矩阵阶数</span></span><br><span class="line">    text = text.upper().replace(<span class="string">&#x27; &#x27;</span>, <span class="string">&#x27;&#x27;</span>) <span class="comment">#将空格删除</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 明文分组中每组元素个数必须等于密钥矩阵列数n,故填充X使明文长度为n的倍数</span></span><br><span class="line">    <span class="keyword">while</span> <span class="built_in">len</span>(text) % n != <span class="number">0</span>:</span><br><span class="line">        text += <span class="string">&#x27;X&#x27;</span></span><br><span class="line"></span><br><span class="line">    result = <span class="string">&quot;&quot;</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, <span class="built_in">len</span>(text), n): <span class="comment">#步长为n,开始循环</span></span><br><span class="line">        <span class="comment"># 取出n个字母转成数字向量</span></span><br><span class="line">        vec = np.array([[c2n(ch)] <span class="keyword">for</span> ch <span class="keyword">in</span> text[i:i + n]])</span><br><span class="line">        <span class="comment"># 加密：密钥×向量 mod 26</span></span><br><span class="line">        enc = np.dot(key, vec) % <span class="number">26</span></span><br><span class="line">        <span class="comment"># 转回字母</span></span><br><span class="line">        result += <span class="string">&#x27;&#x27;</span>.join(n2c(<span class="built_in">int</span>(x)) <span class="keyword">for</span> x <span class="keyword">in</span> enc.flatten())<span class="comment">#将[[x], [y]]转回成[x, y]</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> result</span><br><span class="line"></span><br><span class="line"><span class="comment"># 解密</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">decrypt</span>(<span class="params">text, key</span>):</span><br><span class="line">    n = <span class="built_in">len</span>(key)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 求逆矩阵（模26）</span></span><br><span class="line">    det = <span class="built_in">int</span>(<span class="built_in">round</span>(np.linalg.det(key)))<span class="comment"># 行列式</span></span><br><span class="line">    det_inv = <span class="built_in">pow</span>(det % <span class="number">26</span>, -<span class="number">1</span>, <span class="number">26</span>)  <span class="comment"># 模逆</span></span><br><span class="line">    inv_key = (np.<span class="built_in">round</span>(np.linalg.inv(key) * det).astype(<span class="built_in">int</span>) * det_inv) % <span class="number">26</span></span><br><span class="line"></span><br><span class="line">    result = <span class="string">&quot;&quot;</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, <span class="built_in">len</span>(text), n):</span><br><span class="line">        vec = np.array([[c2n(ch)] <span class="keyword">for</span> ch <span class="keyword">in</span> text[i:i + n]])</span><br><span class="line">        dec = np.dot(inv_key, vec) % <span class="number">26</span></span><br><span class="line">        result += <span class="string">&#x27;&#x27;</span>.join(n2c(<span class="built_in">int</span>(x)) <span class="keyword">for</span> x <span class="keyword">in</span> dec.flatten())</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> result</span><br><span class="line"></span><br><span class="line"><span class="comment">#示例</span></span><br><span class="line">key = np.array([[<span class="number">3</span>, <span class="number">2</span>], [<span class="number">5</span>, <span class="number">7</span>]])  <span class="comment"># 2x2密钥</span></span><br><span class="line">plain = <span class="string">&quot;HELLO&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;明文: <span class="subst">&#123;plain&#125;</span>&quot;</span>)</span><br><span class="line">cipher = encrypt(plain, key)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;密文: <span class="subst">&#123;cipher&#125;</span>&quot;</span>)</span><br><span class="line">decrypted = decrypt(cipher, key)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;解密: <span class="subst">&#123;decrypted&#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
     </div>
-    
-        <nav class="navigation post-navigation clearfix" role="navigation">
-            
-            <div class="nav-previous clearfix">
-                <a title=" 古典密码（一）" href="/2026/03/29/2026-03-29-古典密码（一）/"><i class="fa fa-angle-left"></i> 上一篇</a>
-            </div>
-            
-            
-            <div class="nav-next clearfix">
-                <a title=" polarisctf" href="/2026/04/01/polarisctf/">下一篇 <i class="fa fa-angle-right"></i></a>
-            </div>
-            
-        </nav>
-    
-    
+    <footer class="article-footer">
+        <a class="article-category-link" href="/categories/crypto/" title="crypto" data-aos="zoom-in">crypto</a>
+
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/tags/hill%E5%AF%86%E7%A0%81/" rel="tag" title="hill密码">hill密码</a></li><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/tags/%E4%BB%BF%E5%B0%84%E5%AF%86%E7%A0%81/" rel="tag" title="仿射密码">仿射密码</a></li><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/tags/%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81/" rel="tag" title="古典密码">古典密码</a></li><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/tags/%E7%BB%B4%E5%90%89%E5%B0%BC%E4%BA%9A%E5%AF%86%E7%A0%81/" rel="tag" title="维吉尼亚密码">维吉尼亚密码</a></li></ul>
+
+    </footer>
+  </div>
+    <nav id="article-nav" aria-label="Article navigation" data-aos="fade-up">
+      <div class="article-nav-link-wrap left">
+            <img data-src="/images/banner.webp" data-sizes="auto" alt="polarisctf" class="lazyload">
+        <a href="/2026/04/01/polarisctf/" aria-label="Prev: polarisctf" title="Prev: polarisctf"></a>
+        <div class="article-nav-caption">Prev</div>
+        <h3 class="article-nav-title">
+            polarisctf
+        </h3>
+      </div>
+    <div class="article-nav-link-wrap right">
+          <img data-src="/images/banner.webp" data-sizes="auto" alt="古典密码（一）" class="lazyload">
+      <a href="/2026/03/29/2026-03-29-%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81%EF%BC%88%E4%B8%80%EF%BC%89/" aria-label="Next: 古典密码（一）"  title="Next: 古典密码（一）"></a>
+      <div class="article-nav-caption">Next</div>
+      <h3 class="article-nav-title">
+          古典密码（一）
+      </h3>
+    </div>
+  </nav>
+
 </article>
 
-        
 
-            </section>
-
-            
-                
-
-<section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
-    <!-- 文章和页面根据splitter来分割，没有的话就从头开始设置为sticky -->
-    
-        <div class="sticky-area">
-    
-    
-    </div>
 </section>
-            
+        </div>
+        <footer id="footer" aria-label="Site footer">
+  <div style="width: 100%; overflow: hidden">
+    <div class="footer-line"></div>
+  </div>
+  <div id="footer-info">
+    <div>
+      <span class="icon-copyright"></span>
+        2020-2026
+        <span class="footer-info-sep rotate"></span>
+      John Doe
+    </div>
+      <div>
+        Powered by&nbsp;<a href="https://hexo.io/" rel="noopener nofollow noreferrer" target="_blank">Hexo</a>&nbsp;
+        Theme.<a href="https://github.com/D-Sketon/hexo-theme-reimu" rel="noopener nofollow noreferrer" target="_blank">Reimu</a>
+      </div>
+      <div>
+        <span class="icon-brush"></span>
+        4.1k
+        &nbsp;|&nbsp;
+        <span class="icon-coffee"></span>
+        00:21
+      </div>
+      <div>
+        <span class="icon-eye"></span>
+        <span id="busuanzi_container_site_pv">Number of visits&nbsp;<span id="busuanzi_value_site_pv"></span></span>
+        &nbsp;|&nbsp;
+        <span class="icon-user"></span>
+        <span id="busuanzi_container_site_uv">Number of visitors&nbsp;<span id="busuanzi_value_site_uv"></span></span>
+      </div>
+  </div>
+</footer>
 
+          <div class="sidebar-top">
+            <div class="sidebar-top-taichi rotate"></div>
+            <div class="arrow-up"></div>
+          </div>
+        <div id="mask" class="hide"></div>
+      </div>
+      <nav id="mobile-nav" aria-label="Mobile navigation">
+  <div class="sidebar-wrap">
+        <div class="sidebar-toc-sidebar"><h3 class="toc-title">Contents</h3>
+<div class="sidebar-toc-wrapper toc-div-class" >
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-%E7%BB%B4%E5%90%89%E5%B0%BC%E4%BA%9A%E5%AF%86%E7%A0%81%EF%BC%88Vigenere-Cipher%EF%BC%89"><span class="toc-number">1.</span> <span class="toc-text">1.维吉尼亚密码（Vigenère Cipher）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1%E5%8A%A0%E5%AF%86%E5%8E%9F%E7%90%86"><span class="toc-number">1.1.</span> <span class="toc-text">1.1加密原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2%E8%A7%A3%E5%AF%86%E5%8E%9F%E7%90%86"><span class="toc-number">1.2.</span> <span class="toc-text">1.2解密原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3%E7%89%B9%E7%82%B9"><span class="toc-number">1.3.</span> <span class="toc-text">1.3特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4%E5%8A%A0%E8%A7%A3%E5%AF%86%E4%BB%A3%E7%A0%81"><span class="toc-number">1.4.</span> <span class="toc-text">1.4加解密代码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-%E4%BB%BF%E5%B0%84%E5%AF%86%E7%A0%81%EF%BC%88Affine-Cipher%EF%BC%89"><span class="toc-number">2.</span> <span class="toc-text">2.仿射密码（Affine Cipher）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1%E5%8A%A0%E5%AF%86%E5%8E%9F%E7%90%86"><span class="toc-number">2.1.</span> <span class="toc-text">2.1加密原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2%E8%A7%A3%E5%AF%86%E5%8E%9F%E7%90%86"><span class="toc-number">2.2.</span> <span class="toc-text">2.2解密原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3%E7%89%B9%E7%82%B9"><span class="toc-number">2.3.</span> <span class="toc-text">2.3特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4%E5%8A%A0%E8%A7%A3%E5%AF%86%E4%BB%A3%E7%A0%81"><span class="toc-number">2.4.</span> <span class="toc-text">2.4加解密代码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-Hill%E5%AF%86%E7%A0%81%EF%BC%88Hill-Cipher%EF%BC%89"><span class="toc-number">3.</span> <span class="toc-text">3.Hill密码（Hill Cipher）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1%E5%8A%A0%E5%AF%86%E5%8E%9F%E7%90%86"><span class="toc-number">3.1.</span> <span class="toc-text">3.1加密原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2%E8%A7%A3%E5%AF%86%E5%8E%9F%E7%90%86"><span class="toc-number">3.2.</span> <span class="toc-text">3.2解密原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3%E7%89%B9%E7%82%B9"><span class="toc-number">3.3.</span> <span class="toc-text">3.3特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-4%E5%8A%A0%E8%A7%A3%E5%AF%86%E4%BB%A3%E7%A0%81"><span class="toc-number">3.4.</span> <span class="toc-text">3.4加解密代码</span></a></li></ol></li></ol>
+</div>
+</div>
+        <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+  <img data-src="/avatar/avatar.webp" data-sizes="auto" alt="John Doe" class="lazyload">
+  <div class="sidebar-author-name">John Doe</div>
+  <div class="sidebar-description"></div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>Post</div>
+    <div class="sidebar-state-number">4</div>
+  </div>
+  <div class="sidebar-state-category">
+    <div>Category</div>
+    <div class="sidebar-state-number">3</div>
+  </div>
+  <div class="sidebar-state-tag">
+    <div>Tag</div>
+    <div class="sidebar-state-number">11</div>
+  </div>
+</div>
+<div class="sidebar-social" >
+</div>
+<div class="sidebar-menu">
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/" aria-label="Home"></a>
+          <div class="sidebar-menu-icon icon rotate">
+              &#xe62b;
+          </div>
+        <div class="sidebar-menu-link">Home</div>
+      </div>
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/archives" aria-label="Archives"></a>
+          <div class="sidebar-menu-icon icon rotate">
+              &#xe62b;
+          </div>
+        <div class="sidebar-menu-link">Archives</div>
+      </div>
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/about" aria-label="About"></a>
+          <div class="sidebar-menu-icon icon rotate">
+              &#xe62b;
+          </div>
+        <div class="sidebar-menu-link">About</div>
+      </div>
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/friend" aria-label="Friend"></a>
+          <div class="sidebar-menu-icon icon rotate">
+              &#xe62b;
+          </div>
+        <div class="sidebar-menu-link">Friend</div>
+      </div>
+</div>
+</div>
+  </div>
+      <div class="sidebar-btn-wrapper">
+        <div class="sidebar-toc-btn current"></div>
+        <div class="sidebar-common-btn"></div>
+      </div>
+</nav>
+
+    </div>
+    
+<script src="https://npm.webcache.cn/lazysizes@5.3.2/lazysizes.min.js" integrity="sha384-3gT&#x2F;vsepWkfz&#x2F;ff7PpWNUeMzeWoH3cDhm&#x2F;A8jM7ouoAK0&#x2F;fP&#x2F;9bcHHR5kHq2nf+e" crossorigin="anonymous"></script>
+
+
+<script src="https://npm.webcache.cn/clipboard@2.0.11/dist/clipboard.min.js" integrity="sha384-J08i8An&#x2F;QeARD9ExYpvphB8BsyOj3Gh2TSh1aLINKO3L0cMSH2dN3E22zFoXEi0Q" crossorigin="anonymous"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+  
+<script src="/js/aos.js"></script>
+
+  <script>
+    var aosInit = () => {
+      AOS.init({
+        duration: 1000,
+        easing: "ease",
+        once: true,
+        offset: 50,
+      });
+    };
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', aosInit);
+    } else {
+      aosInit();
+    }
+  </script>
+
+
+<script src="/js/pjax_script.js" data-pjax></script>
+
+
+
+
+  <script>
+    var setupFirework = () => {
+      if (!false || !window.matchMedia('(max-width: 768px)').matches) {
+        window.firework && window.firework(JSON.parse('{"excludeElements":["a","button"],"particles":[{"shape":"circle","move":["emit"],"easing":"easeOutExpo","colors":["var(--red-1)","var(--red-2)","var(--red-3)","var(--red-4)"],"number":20,"duration":[1200,1800],"shapeOptions":{"radius":[16,32],"alpha":[0.3,0.5]}},{"shape":"circle","move":["diffuse"],"easing":"easeOutExpo","colors":["var(--red-0)"],"number":1,"duration":[1200,1800],"shapeOptions":{"radius":20,"alpha":[0.2,0.5],"lineWidth":6}}]}'));
+      }
+    }
+  </script>
+  
+<script src="https://npm.webcache.cn/mouse-firework@0.2.0/dist/index.umd.js" integrity="sha384-qi9WggRt19tv8Vc7pCHW3ulMNLwrn515zaLEWZjl1px07vz8+pUoWX8n1rgq282T" crossorigin="anonymous" onload="setupFirework()" defer></script>
+
+
+
+
+
+
+<div id="lazy-script">
+  <div>
+      
+      
+      <script data-pjax>
+        window.REIMU_POST = {
+          author: "John Doe",
+          title: "古典密码（二）",
+          url: "http://example.com/2026/03/31/2026-03-31-%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81%EF%BC%88%E4%BA%8C%EF%BC%89/",
+          excerpt: "",
+          description: "古典密码",
+          stripContent: "1.维吉尼亚密码（Vigenère Cipher）维吉尼亚密码是一种经典的多表替换密码，通过一串密钥字母来循环控制每一位明文的移位长度，从而有效抵御简单的频率分析攻击。 1.1加密原理（1）选取一个密钥单词，将其循环扩展至与明文等长。（2）对每一位明文字母$m_i$和对应密钥字母$k_i$,加密公式为: $c_i&amp;#x3D;(m_i+k_i)mod26$ （3）字谜对应数值：A&amp;#x3D;0,B&amp;#x3D;1,…,Z&amp;#x3D;25 （4）最终将计算结果转回字母，得到密文 1.2解密原理解密是加",
+          date: "Tue Mar 31 2026 10:00:00 GMT+0800",
+          updated: "Wed Apr 01 2026 13:58:59 GMT+0800",
+          cover: "/images/banner.webp",
+        };
+      </script>
+        
+<script src="/js/insert_highlight.js" data-pjax></script>
+
+      
+<script src="/js/tabs.js" data-pjax defer></script>
+
+      <script type="module" data-pjax>
+        (async () => {
+          const PhotoSwipeLightbox = (await safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe-lightbox.esm.min.js", "sha384-DiL6M/gG+wmTxmCRZyD1zee6lIhawn5TGvED0FOh7fXcN9B0aZ9dexSF/N6lrZi/")).default;
+          const initPswp = (gallery, children) => {
+            if (_$$(`${gallery} ${children}`).length > 0) {
+              new PhotoSwipeLightbox({
+                gallery,
+                children,
+                pswpModule: () => safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.esm.min.js", "sha384-WkkO3GCmgkC3VQWpaV8DqhKJqpzpF9JoByxDmnV8+oTJ7m3DfYEWX1fu1scuS4+s")
+              }).init();
+            }
+          }
+          const pswp = () => {
+            initPswp('.article-entry', 'a.article-gallery-item');
+            initPswp('.article-gallery', 'a.article-gallery-item');
+          }
+          pswp();
+        })();
+      </script>
         
 
-                </div>
-    </div>
-</div>
 
-<footer>
-    <div id="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-md-offset-3 footer-list text-center">
-                    <ul class="kratos-social-icons">
-                        
-                    </ul>
-                    <ul class="kratos-copyright">
-                        <div>
-                            <li>&copy; 2026 Hexo 版权所有.</li>
-                            <li>本站已运行<span id="kr-since">Loading...</span></li>
-                        </div>
-                        <div>
-                            <li>自豪地使用 <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a> 主题</li>
-                            <li>站点由 John Doe 用 <i class="fa fa-heart" style="color:#d43f57"></i> 搭建</li>
-                        </div>
-                        <!-- 额外的追加注入项 -->
-                        
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="kr-tool text-center">
-            <div class="tool">
-                <!-- 额外的追加注入项 -->
-                
-                
-                    <div class="box search-box">
-                        <a href="/search">
-                            <span class="fa fa-search"></span>
-                        </a>
-                    </div>
-                
-                <div class="box theme-box" id="theme-toggle">
-                    <span class="fa fa-adjust"></span>
-                </div>
-            </div>
-            <div id="gotop-box" class="box gotop-box">
-                <span class="fa fa-chevron-up"></span>
-            </div>
-        </div>
-    </div>
-</footer>
-</div>
+  </div>
 </div>
 
 
-    <div id="kr-donate-modal" class="kr-modal">
-    <div class="kr-modal-bg" onclick="krCloseDonateModal()"></div>
-    <div class="kr-modal-content">
-        <div class="kr-modal-header">
-            <div class="kr-modal-icon">
-                <i class="fa fa-bitcoin"></i>
-            </div>
-            <div class="kr-modal-title">打赏</div>
-            <button class="kr-modal-close" onclick="krCloseDonateModal()">
-                <i class="fa fa-times-circle"></i>
-            </button>
-        </div>
-        <div class="kr-modal-body">
-            <div class="kr-donate-message">打赏提示信息</div>
-            <div class="kr-donate-qr" id="kr-donate-qr">
-                
-            </div>
-            <div class="kr-donate-platforms">
-                
-            </div>
-        </div>
-    </div>
-</div>
-<script defer src="/js/kr-modal/donate.min.js"></script>
+  <script>
+    console.log(String.raw`%c 
+ ______     ______     __     __    __     __  __    
+/\  == \   /\  ___\   /\ \   /\ "-./  \   /\ \/\ \   
+\ \  __<   \ \  __\   \ \ \  \ \ \-./\ \  \ \ \_\ \  
+ \ \_\ \_\  \ \_____\  \ \_\  \ \_\ \ \_\  \ \_____\ 
+  \/_/ /_/   \/_____/   \/_/   \/_/  \/_/   \/_____/ 
+                                                  
+`,'color: #ff5252;')
+    console.log('%c Theme.Reimu v' + '1.12.3' + ' %c https://github.com/D-Sketon/hexo-theme-reimu ', 'color: white; background: #ff5252; padding:5px 0;', 'padding:4px;border:1px solid #ff5252;')
+  </script>
+  
 
 
+  
+<script src="https://npm.webcache.cn/busuanzi@2.3.0/bsz.pure.mini.js" integrity="sha384-0M75wtSkhjIInv4coYlaJU83+OypaRCIq2SukQVQX04eGTCBXJDuWAbJet56id+S" crossorigin="anonymous" async></script>
 
 
-    <div id="kr-share-modal" class="kr-modal">
-    <div class="kr-modal-bg" onclick="krCloseShareModal()"></div>
-    <div class="kr-modal-content">
-        <div class="kr-modal-header">
-            <div class="kr-modal-icon">
-                <i class="fa fa-share-alt"></i>
-            </div>
-            <div class="kr-modal-title">分享</div>
-            <button class="kr-modal-close" onclick="krCloseShareModal()">
-                <i class="fa fa-times-circle"></i>
-            </button>
-        </div>
-        <div class="kr-modal-body">
-            <div class="kr-share-message">分享提示信息</div>
-            <div class="kr-share-qr" id="kr-share-qr"></div>
-            <div class="kr-share-platforms">
-                
-            </div>
-        </div>
-    </div>
-</div>
-<script defer src="/js/kr-modal/share.min.js"></script>
-
-
-
-<!-- 额外的追加注入项 -->
-
-
-        <script>
-    if (!window.kr) {
-        window.kr = {};
-    }
-    window.kr.notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));
-    window.kr.siteRoot = "/";
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.getRegistrations().then((registrations) => {
+      for (let registration of registrations) {
+        registration.unregister();
+      }
+    });
+  }
 </script>
 
 
-  <script defer src="/vendors/nprogress@0.2.0/nprogress.js"></script>
 
 
-
-  <script defer src="/vendors/viewerjs@1.11.6/dist/viewer.min.js"></script>
-
-
-<script defer src="/js/kr-core.min.js"></script>
-
-
-  <script defer src="/js/kr-pjax.min.js"></script>
-
-
-<!-- 额外的追加注入项 -->
-
-
-    </body>
-</html>
+  </body>
+  </html>
