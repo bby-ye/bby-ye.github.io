@@ -39,6 +39,19 @@
 <link rel="stylesheet" href="https://npm.webcache.cn/@reimujs/aos@0.1.2/dist/aos.css" integrity="sha384-GMRP93c6Hkz9JVKGAuRR3nTS7M07RwPgTFenXiosjq2VbVgvdDNcz1g6Mkj8AONa" crossorigin="anonymous">
 
 <meta name="generator" content="Hexo 8.1.1"></head>
+<!-- MathJax 3.x 数学公式渲染支持 -->
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    processEscapes: true
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
   <body>
       <div id='loader'>
@@ -221,7 +234,7 @@
 需要注意的是，明文的分组长度需要为64位（8个字节），密钥长度为64位（56位有效位+8位奇偶校验位）。
 
 加密过程简要概括就是：
-明文(64位) → IP置换 → 16轮迭代 → (IP^{-1})逆置换 → 密文(64位)
+明文(64位) → IP置换 → 16轮迭代 → IP^(-1)逆置换 → 密文(64位)
 F是轮函数，它的四个步骤包括：
 
 
@@ -254,7 +267,7 @@ S盒替换
 
 4
 P盒置换
-32位
+32位 →
       </article>
     </div>
   </div>
