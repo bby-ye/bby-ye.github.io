@@ -214,12 +214,14 @@
       </div>
       <h2 class="post-title">DES加解密原理</h2>
       <article class="post-article">
-          DES加密原理
+           DES
+ 加密原理
+
 
 需要注意的是，明文的分组长度需要为64位（8个字节），密钥长度为64位（56位有效位+8位奇偶校验位）。
 
 加密过程简要概括就是：
-明文(64位) → IP置换 → 16轮迭代 → $IP^{-1}$逆置换 → 密文(64位)
+明文(64位) → IP置换 → 16轮迭代 → IP−1IP^{-1}IP−1逆置换 → 密文(64位)
 F是轮函数，它的四个步骤包括：
 
 
@@ -228,6 +230,7 @@ F是轮函数，它的四个步骤包括：
 操作
 输入→输出
 说明
+
 
 
 
@@ -250,8 +253,7 @@ S盒替换
 
 
 4
-P盒置换
-32位 → 32
+P盒
       </article>
     </div>
   </div>
@@ -265,13 +267,17 @@ P盒置换
     <div class="post-info">
       <div class="post-meta">
         <span><span class="icon-calendar"></span>2026-04-01</span>
-        <span><span class="icon-pencil"></span>582 words</span>
+        <span><span class="icon-pencil"></span>587 words</span>
         <span><span class="icon-clock"></span>4 mins</span>
       </div>
       <h2 class="post-title">polarisctf</h2>
       <article class="post-article">
-          1.ez_login1.1解题思路在浏览器复制粘贴网址nc1.ctfplus.cn:20520进入,然后输入账号“admin”，密码“admin123”，就可以看到flag。
-2.神秘学2.1题目代码123456789101112131415161718192021222324252627282930313233343536373839404142434445464748import sympyimport randomfrom Crypto.Util.number import *from secret import flag, cdef get_poly(k):    x,a,b = sy
+           1.ez_login
+ 1.1解题思路
+在浏览器复制粘贴网址nc1.ctfplus.cn:20520进入,然后输入账号“admin”，密码“admin123”，就可以看到flag。
+ 2.神秘学
+ 2.1题目代码
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748import sympyimport randomfrom Crypto.Util.number import *from secret import flag, cdef get_poly(k):    x,
       </article>
     </div>
   </div>
@@ -285,19 +291,22 @@ P盒置换
     <div class="post-info">
       <div class="post-meta">
         <span><span class="icon-calendar"></span>2026-03-31</span>
-        <span><span class="icon-pencil"></span>1.4k words</span>
+        <span><span class="icon-pencil"></span>1.5k words</span>
         <span><span class="icon-clock"></span>7 mins</span>
       </div>
       <h2 class="post-title">古典密码（二）</h2>
       <article class="post-article">
-          1.维吉尼亚密码（Vigenère Cipher）维吉尼亚密码是一种经典的多表替换密码，通过一串密钥字母来循环控制每一位明文的移位长度，从而有效抵御简单的频率分析攻击。
-1.1加密原理（1）选取一个密钥单词，将其循环扩展至与明文等长。（2）对每一位明文字母$m_i$和对应密钥字母$k_i$,加密公式为:
-$c_i&amp;#x3D;(m_i+k_i)mod26$
-（3）字谜对应数值：A&amp;#x3D;0,B&amp;#x3D;1,…,Z&amp;#x3D;25
+           1.维吉尼亚密码（Vigenère Cipher）
+维吉尼亚密码是一种经典的多表替换密码，通过一串密钥字母来循环控制每一位明文的移位长度，从而有效抵御简单的频率分析攻击。
+ 1.1加密原理
+（1）选取一个密钥单词，将其循环扩展至与明文等长。
+（2）对每一位明文字母mim_imi​和对应密钥字母kik_iki​,加密公式为:
+ci=(mi+ki)mod26c_i=(m_i+k_i)mod26ci​=(mi​+ki​)mod26
+（3）字谜对应数值：A=0,B=1,…,Z=25
 （4）最终将计算结果转回字母，得到密文
-1.2解密原理解密是加密的逆过程，使用相同密钥，将移位反向：
-$m_i&amp;#x3D;(c_i-k_i)mod26$
-再转回字
+ 1.2解密原理
+解密是加密的逆过程，使用相同密钥，将移位反向：
+mi=(ci
       </article>
     </div>
   </div>
@@ -316,9 +325,12 @@ $m_i&amp;#x3D;(c_i-k_i)mod26$
       </div>
       <h2 class="post-title">古典密码（一）</h2>
       <article class="post-article">
-          1.凯撒密码（Caesar Cipher） 凯撒密码是最经典的单字母移位替换密码，也是密码学入门的标志性算法。其核心思想是将明文中的每一个字母，按照字母表顺序统一向前或向后移动固定位数，从而形成密文。 
-1.1加密原理对于每个明文字母 m，按密钥 k（位移量）进行移位： [ c &amp;#x3D; (m + k) \mod 26 ] 例如密钥为 3 时，A→D、B→E、X→A，以此类推。 **
-1.2解密原理将密文字母反向移动相同位数即可恢复明文： [ m &amp;#x3D; (c - k) \mod 26 ] 凯撒密码实现简单、运算高效，但安全性极低，仅能抵御简单的信息偷窥，通过频率分析或暴力枚举 25
+           1.凯撒密码（Caesar Cipher）
+凯撒密码是最经典的单字母移位替换密码，也是密码学入门的标志性算法。其核心思想是将明文中的每一个字母，按照字母表顺序统一向前或向后移动固定位数，从而形成密文。
+ 1.1加密原理
+对于每个明文字母 m，按密钥 k（位移量）进行移位： [ c = (m + k) \mod 26 ] 例如密钥为 3 时，A→D、B→E、X→A，以此类推。 **
+ 1.2解密原理
+将密文字母反向移动相同位数即可恢复明文： [ m = (c - k) \mod 26 ] 凯撒密码实现简单、运算高效，但安全性极低，仅能抵御简单的信息偷窥，通过频率分析或暴力枚举 25 种可能即可
       </article>
     </div>
   </div>
@@ -337,23 +349,27 @@ $m_i&amp;#x3D;(c_i-k_i)mod26$
       </div>
       <h2 class="post-title">我的第一篇博客</h2>
       <article class="post-article">
-          Hello World！👋终于搭建好了自己的博客，今天开始记录学习生活。
-为什么写博客？写博客有几个原因：
+           Hello World！👋
+终于搭建好了自己的博客，今天开始记录学习生活。
+ 为什么写博客？
+写博客有几个原因：
 
 记录学习：把学到的知识整理成文字
 分享经验：帮助遇到同样问题的朋友
 督促自己：定期更新，保持学习习惯
 认识朋友：通过博客认识志同道合的人
 
-博客写什么？我打算分享这些内容：
+ 博客写什么？
+我打算分享这些内容：
 
 📝 技术学习笔记
-💻 编程项目经验  
+💻 编程项目经验
 📚 读书心得体会
 🎯 生活感悟记录
 
-第一个代码示例既然是技术博客，先来段代码吧：
-12345def greet(name):    &amp;quot;&amp;quot;&amp;quot;简单的问候函数&amp;quot;&amp;quot;&amp;quot;    return f&amp;quot;Hell
+ 第一个代码示例
+既然是技术博客，先来段代码吧：
+12345def greet(name):    &amp;quot;&amp;quot;&amp;quot;简单的问候函数&amp;quot;&amp;quot;&amp;quot;    return f&amp;quo
       </article>
     </div>
   </div>
@@ -378,7 +394,7 @@ $m_i&amp;#x3D;(c_i-k_i)mod26$
       </div>
       <div>
         <span class="icon-brush"></span>
-        6k
+        6.1k
         &nbsp;|&nbsp;
         <span class="icon-coffee"></span>
         00:32
