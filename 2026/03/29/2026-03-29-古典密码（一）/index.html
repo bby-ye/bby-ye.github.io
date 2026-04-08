@@ -25,7 +25,7 @@
 <meta property="og:description" content="古典密码">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2026-03-29T14:55:00.000Z">
-<meta property="article:modified_time" content="2026-03-29T14:56:38.520Z">
+<meta property="article:modified_time" content="2026-04-08T12:03:13.932Z">
 <meta property="article:author" content="bby">
 <meta property="article:tag" content="playfair密码">
 <meta property="article:tag" content="凯撒密码">
@@ -221,7 +221,7 @@
       <div class="article-date">
   <span class="article-date-link icon-calendar" data-aos="zoom-in">
     <time datetime="2026-03-29T14:55:00.000Z" itemprop="datePublished">2026-03-29</time>
-    <time style="display: none;" id="post-update-time">2026-03-29</time>
+    <time style="display: none;" id="post-update-time">2026-04-08</time>
   </span>
 </div>
 
@@ -233,7 +233,7 @@
         <h1 id="1凯撒密码caesar-cipher"><a class="markdownIt-Anchor" href="#1凯撒密码caesar-cipher"></a> 1.凯撒密码（Caesar Cipher）</h1>
 <p>凯撒密码是最经典的单字母移位替换密码，也是密码学入门的标志性算法。其核心思想是将明文中的每一个字母，按照字母表顺序统一向前或向后移动固定位数，从而形成密文。</p>
 <h2 id="11加密原理"><a class="markdownIt-Anchor" href="#11加密原理"></a> 1.1加密原理</h2>
-<p>对于每个明文字母 <code>m</code>，按密钥 <code>k</code>（位移量）进行移位： [ c = (m + k) \mod 26 ] 例如密钥为 3 时，A→D、B→E、X→A，以此类推。 **</p>
+<p>对于每个明文字母 <code>m</code>，按密钥 <code>k</code>（位移量）进行移位： [ c = (m + k) \mod 26 ] 例如密钥为 3 时，A→D、B→E、X→A，以此类推。</p>
 <h2 id="12解密原理"><a class="markdownIt-Anchor" href="#12解密原理"></a> 1.2解密原理</h2>
 <p>将密文字母反向移动相同位数即可恢复明文： [ m = (c - k) \mod 26 ] 凯撒密码实现简单、运算高效，但安全性极低，仅能抵御简单的信息偷窥，通过频率分析或暴力枚举 25 种可能即可快速破解。它更多用于教学，帮助理解“替换密码”的基本思想。</p>
 <h2 id="13加解密代码"><a class="markdownIt-Anchor" href="#13加解密代码"></a> 1.3加解密代码</h2>
@@ -457,9 +457,9 @@
           url: "http://example.com/2026/03/29/2026-03-29-%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81%EF%BC%88%E4%B8%80%EF%BC%89/",
           excerpt: "",
           description: "古典密码",
-          stripContent: " 1.凯撒密码（Caesar Cipher） 凯撒密码是最经典的单字母移位替换密码，也是密码学入门的标志性算法。其核心思想是将明文中的每一个字母，按照字母表顺序统一向前或向后移动固定位数，从而形成密文。  1.1加密原理 对于每个明文字母 m，按密钥 k（位移量）进行移位： [ c = (m + k) \mod 26 ] 例如密钥为 3 时，A→D、B→E、X→A，以此类推。 **  1.2解密原理 将密文字母反向移动相同位数即可恢复明文： [ m = (c - k) \mod 26 ] 凯撒密",
+          stripContent: " 1.凯撒密码（Caesar Cipher） 凯撒密码是最经典的单字母移位替换密码，也是密码学入门的标志性算法。其核心思想是将明文中的每一个字母，按照字母表顺序统一向前或向后移动固定位数，从而形成密文。  1.1加密原理 对于每个明文字母 m，按密钥 k（位移量）进行移位： [ c = (m + k) \mod 26 ] 例如密钥为 3 时，A→D、B→E、X→A，以此类推。  1.2解密原理 将密文字母反向移动相同位数即可恢复明文： [ m = (c - k) \mod 26 ] 凯撒密码实现",
           date: "Sun Mar 29 2026 22:55:00 GMT+0800",
-          updated: "Sun Mar 29 2026 22:56:38 GMT+0800",
+          updated: "Wed Apr 08 2026 20:03:13 GMT+0800",
           cover: "/images/banner.webp",
         };
       </script>
