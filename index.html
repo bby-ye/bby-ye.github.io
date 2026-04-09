@@ -1,583 +1,185 @@
-  <!DOCTYPE html>
-  <html lang="en"  
-      data-theme-mode="auto"
-  >
-  <head>
-  <meta charset="utf-8">
-  
-  
-  
-  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_a0oqhord1y';window.REIMU_CONFIG.clipboard_tips = {"success":{"en":"Copy successfully (*^▽^*)"},"fail":{"en":"Copy failed (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":false,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = 'All articles on this blog are licensed under the BY-NC-SA license agreement unless otherwise stated. Please indicate the source when reprinting!';window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'http://example.com';</script>
-  <title>
-    bby-blog
-  </title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic|Noto Serif SC:400,400italic,700,700italic&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic|Noto Serif SC:400,400italic,700,700italic&display=swap" media="print" onload="this.media='all'">
-    <link rel="preload" href="//at.alicdn.com/t/c/font_4552607_a0oqhord1y.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    
-<link rel="stylesheet" href="/css/loader.css">
-
-    <meta property="og:type" content="website">
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>bby-blog</title><meta name="author" content="bby"><meta name="copyright" content="bby"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
 <meta property="og:title" content="bby-blog">
 <meta property="og:url" content="http://example.com/index.html">
 <meta property="og:site_name" content="bby-blog">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/images/banner.webp">
+<meta property="og:image" content="http://example.com/img/butterfly-icon.png">
 <meta property="article:author" content="bby">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/images/banner.webp">
-    <link rel="alternate" href="/atom.xml" title="bby-blog" type="application/atom+xml">
-    <link rel="shortcut icon" href="/images/favicon.ico">
-  
-<link rel="stylesheet" href="/css/style.css">
-
-  <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.css" integrity="sha384-IfxC36XL/toUyJ939C73PcgMuRzAZuIzZxE38drsmO5p6jD7ei+Zx/1oA/0l8ysE" crossorigin="anonymous">
-    
-<script src="https://npm.webcache.cn/pace-js@1.2.4/pace.min.js" integrity="sha384-k6YtvFUEIuEFBdrLKJ3YAUbBki333tj1CSUisai5Cswsg9wcLNaPzsTHDswp4Az8" crossorigin="anonymous"></script>
-
-    
-<link rel="stylesheet" href="https://npm.webcache.cn/@reimujs/aos@0.1.2/dist/aos.css" integrity="sha384-GMRP93c6Hkz9JVKGAuRR3nTS7M07RwPgTFenXiosjq2VbVgvdDNcz1g6Mkj8AONa" crossorigin="anonymous">
-
-<meta name="generator" content="Hexo 8.1.1"></head>
-<!-- MathJax 3.x 数学公式渲染支持 -->
-<script>
-window.MathJax = {
-  tex: {
-    inlineMath: [['$', '$'], ['\\(', '\\)']],
-    processEscapes: true
-  },
-  svg: {
-    fontCache: 'global'
-  }
-};
-</script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
-  <body>
-      <div id='loader'>
-    <div class="loading-left-bg loading-bg"></div>
-    <div class="loading-right-bg loading-bg"></div>
-    <div class="spinner-box">
-      <div class="loading-taichi rotate">
-          <svg width="150" height="150" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="https://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
-            <path d="M303.5 432A80 80 0 0 1 291.5 592A80 80 0 0 1 303.5 432z" fill="var(--red-1, #ff5252)" />
-            <path d="M512 65A447 447 0 0 1 512 959L512 929A417 417 0 0 0 512 95A417 417 0 0 0 512 929L512 959A447 447 0 0 1 512 65z 
-           M512 95A417 417 0 0 1 929 512A208.5 208.5 0 0 1 720.5 720.5L720.5 592A80 80 0 0 0 720.5 432A80 80 0 0 0 720.5 592L720.5 720.5A208.5 208.5 0 0 1 512 512A208.5 208.5 0 0 0 303.5 303.5A208.5 208.5 0 0 0 95 512A417 417 0 0 1 512 95z" fill="var(--red-1, #ff5252)" />
-          </svg>
-      </div>
-      <div class="loading-word">Loading...</div>
-    </div>
-  </div>
-  <script>
-    var time = null;
-    var loaderEl = document.getElementById('loader');
-    var startLoading = () => {
-      time = Date.now();
-      loaderEl.classList.remove("loading");
+<meta name="twitter:image" content="http://example.com/img/butterfly-icon.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "bby-blog",
+  "alternateName": [
+    "example.com"
+  ],
+  "url": "http://example.com/"
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
     }
-    var hideLoader = () => {
-      document.body.style.overflow = 'auto';
-      loader.classList.add('loading');
-    };
 
-    var endLoading = () => {
-      if (!time) {
-        hideLoader();
-      } else {
-        if (Date.now() - time > 500) {
-          time = null;
-          hideLoader();
-        } else {
-          setTimeout(endLoading, 500 - (Date.now() - time));
-          time = null;
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
         }
       }
-    }
-    window.addEventListener('DOMContentLoaded', endLoading);
-    loaderEl.addEventListener('click', endLoading);
-  </script>
-<div id="copy-tooltip"></div>
-<div id="heatmap-tooltip"></div>
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
 
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
 
-    <div id="container">
-      <div id="wrap">
-        <div id="header-nav">
-  <nav id="main-nav" aria-label="Primary navigation">
-        <a class="main-nav-link-wrap" href="/">
-            <div class="main-nav-icon icon rotate">
-                &#xe62b;
-            </div>
-          <span class="main-nav-link">Home</span>
-        </a>
-        <a class="main-nav-link-wrap" href="/archives">
-            <div class="main-nav-icon icon rotate">
-                &#xe62b;
-            </div>
-          <span class="main-nav-link">Archives</span>
-        </a>
-        <a class="main-nav-link-wrap" href="/about">
-            <div class="main-nav-icon icon rotate">
-                &#xe62b;
-            </div>
-          <span class="main-nav-link">About</span>
-        </a>
-        <a class="main-nav-link-wrap" href="/friend">
-            <div class="main-nav-icon icon rotate">
-                &#xe62b;
-            </div>
-          <span class="main-nav-link">Friend</span>
-        </a>
-    <a id="main-nav-toggle" class="nav-icon" aria-label="Toggle navigation" role="button"></a>
-  </nav>
-  <nav id="sub-nav" aria-label="Secondary navigation">
-      <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed" aria-label="RSS Feed" target="_blank"></a>
-  </nav>
-</div>
-<header id="header" aria-label="Site header">
-      <picture>
-      </picture>
-        <img  fetchpriority="high" src="/images/banner.webp" alt="">
-  <div id="header-outer">
-    <div id="header-title">
-          <span id="logo">
-            <h1 data-aos="slide-up">bby-blog</h1>
-          </span>
-        <h2 id="subtitle-wrap" data-aos="slide-down">
-        </h2>
-    </div>
-  </div>
-</header>
-
-        <div id="content" aria-label="Page content"  class="sidebar-right" >
-          <aside id="sidebar" aria-label="Sidebar">
-  <div class="sidebar-wrapper-container ">
-  <div class="sidebar-wrapper">
-    <div class="sidebar-wrap" data-aos="fade-up">
-        <div class="sidebar-author">
-  <img data-src="/avatar/%E5%A4%B4%E5%83%8F.jpg" data-sizes="auto" alt="bby" class="lazyload">
-  <div class="sidebar-author-name">bby</div>
-  <div class="sidebar-description"></div>
-</div>
-<div class="sidebar-state">
-  <div class="sidebar-state-article">
-    <div>Post</div>
-    <div class="sidebar-state-number">5</div>
-  </div>
-  <div class="sidebar-state-category">
-    <div>Category</div>
-    <div class="sidebar-state-number">3</div>
-  </div>
-  <div class="sidebar-state-tag">
-    <div>Tag</div>
-    <div class="sidebar-state-number">13</div>
-  </div>
-</div>
-<div class="sidebar-social" >
-</div>
-<div class="sidebar-menu">
-      <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/" aria-label="Home"></a>
-          <div class="sidebar-menu-icon icon rotate">
-              &#xe62b;
-          </div>
-        <div class="sidebar-menu-link">Home</div>
-      </div>
-      <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/archives" aria-label="Archives"></a>
-          <div class="sidebar-menu-icon icon rotate">
-              &#xe62b;
-          </div>
-        <div class="sidebar-menu-link">Archives</div>
-      </div>
-      <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/about" aria-label="About"></a>
-          <div class="sidebar-menu-icon icon rotate">
-              &#xe62b;
-          </div>
-        <div class="sidebar-menu-link">About</div>
-      </div>
-      <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/friend" aria-label="Friend"></a>
-          <div class="sidebar-menu-icon icon rotate">
-              &#xe62b;
-          </div>
-        <div class="sidebar-menu-link">Friend</div>
-      </div>
-</div>
-
-    </div>
-  </div>
-  <div class="sidebar-widget">
-  </div>
-  </div>
-</aside>
-
-          <section id="main" aria-label="Main content">      <div class="post-wrapper">
-  <div class="post-wrap left" data-aos="fade-up">
-      <a class="post-link" href="/2026/04/08/2026-04-08-DES%E5%8A%A0%E8%A7%A3%E5%AF%86%E5%8E%9F%E7%90%86/" aria-label="DES加解密原理" title="DES加解密原理"></a>
-    <div class="post-cover left">
-          <img data-src="/images/banner.webp" data-sizes="auto" alt="DES加解密原理" class="lazyload">
-    </div>
-    <div class="post-info">
-      <div class="post-meta">
-        <span><span class="icon-calendar"></span>2026-04-08</span>
-        <span><span class="icon-pencil"></span>2k words</span>
-        <span><span class="icon-clock"></span>11 mins</span>
-      </div>
-      <h2 class="post-title">DES加解密原理</h2>
-      <article class="post-article">
-           DES
- 加密原理
-
-
-需要注意的是，明文的分组长度需要为64位（8个字节），密钥长度为64位（56位有效位+8位奇偶校验位）。
-
-加密过程简要概括就是：
-明文(64位) → IP置换 → 16轮迭代 → IP^{-1}逆置换 → 密文(64位)
-F是轮函数，它的四个步骤包括：
-
-
-
-步骤
-操作
-输入→输出
-说明
-
-
-
-
-1
-扩展置换(E盒)
-32位 → 48位
-将右半部分扩展，使与48位子密钥对齐
-
-
-2
-与子密钥异或
-48位 ⊕ 48位
-将扩展后的结果与本轮子密钥按位异或
-
-
-3
-S盒替换
-48位 → 32位
-8个S盒并行，每个将6位压缩为4位（非线性核心）
-
-
-4
-P盒置换
-32位 →
-      </article>
-    </div>
-  </div>
-</div>
-      <div class="post-wrapper">
-  <div class="post-wrap right" data-aos="fade-up">
-      <a class="post-link" href="/2026/04/01/polarisctf/" aria-label="polarisctf" title="polarisctf"></a>
-    <div class="post-cover right">
-          <img data-src="/images/banner.webp" data-sizes="auto" alt="polarisctf" class="lazyload">
-    </div>
-    <div class="post-info">
-      <div class="post-meta">
-        <span><span class="icon-calendar"></span>2026-04-01</span>
-        <span><span class="icon-pencil"></span>580 words</span>
-        <span><span class="icon-clock"></span>4 mins</span>
-      </div>
-      <h2 class="post-title">polarisctf</h2>
-      <article class="post-article">
-           1.ez_login
- 1.1解题思路
-在浏览器复制粘贴网址nc1.ctfplus.cn:20520进入,然后输入账号“admin”，密码“admin123”，就可以看到flag。
- 2.神秘学
- 2.1题目代码
-123456789101112131415161718192021222324252627282930313233343536373839404142434445464748import sympyimport randomfrom Crypto.Util.number import *from secret import flag, cdef get_poly(k):    x,
-      </article>
-    </div>
-  </div>
-</div>
-      <div class="post-wrapper">
-  <div class="post-wrap left" data-aos="fade-up">
-      <a class="post-link" href="/2026/03/31/2026-03-31-%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81%EF%BC%88%E4%BA%8C%EF%BC%89/" aria-label="古典密码（二）" title="古典密码（二）"></a>
-    <div class="post-cover left">
-          <img data-src="/images/banner.webp" data-sizes="auto" alt="古典密码（二）" class="lazyload">
-    </div>
-    <div class="post-info">
-      <div class="post-meta">
-        <span><span class="icon-calendar"></span>2026-03-31</span>
-        <span><span class="icon-pencil"></span>1.4k words</span>
-        <span><span class="icon-clock"></span>7 mins</span>
-      </div>
-      <h2 class="post-title">古典密码（二）</h2>
-      <article class="post-article">
-           1.维吉尼亚密码（Vigenère Cipher）
-维吉尼亚密码是一种经典的多表替换密码，通过一串密钥字母来循环控制每一位明文的移位长度，从而有效抵御简单的频率分析攻击。
- 1.1加密原理
-（1）选取一个密钥单词，将其循环扩展至与明文等长。
-（2）对每一位明文字母mim_imi​和对应密钥字母kik_iki​,加密公式为:
-c_i=(m_i+k_i)mod26
-（3）字谜对应数值：A=0,B=1,…,Z=25
-（4）最终将计算结果转回字母，得到密文
- 1.2解密原理
-解密是加密的逆过程，使用相同密钥，将移位反向：
-m_i=(c_i-k_i)mod26
-再转回字母即可恢复明文。
- 1.3特点
-
-      </article>
-    </div>
-  </div>
-</div>
-      <div class="post-wrapper">
-  <div class="post-wrap right" data-aos="fade-up">
-      <a class="post-link" href="/2026/03/29/2026-03-29-%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81%EF%BC%88%E4%B8%80%EF%BC%89/" aria-label="古典密码（一）" title="古典密码（一）"></a>
-    <div class="post-cover right">
-          <img data-src="/images/banner.webp" data-sizes="auto" alt="古典密码（一）" class="lazyload">
-    </div>
-    <div class="post-info">
-      <div class="post-meta">
-        <span><span class="icon-calendar"></span>2026-03-29</span>
-        <span><span class="icon-pencil"></span>1.9k words</span>
-        <span><span class="icon-clock"></span>9 mins</span>
-      </div>
-      <h2 class="post-title">古典密码（一）</h2>
-      <article class="post-article">
-           1.凯撒密码（Caesar Cipher）
-凯撒密码是最经典的单字母移位替换密码，也是密码学入门的标志性算法。其核心思想是将明文中的每一个字母，按照字母表顺序统一向前或向后移动固定位数，从而形成密文。
- 1.1加密原理
-对于每个明文字母 m，按密钥 k（位移量）进行移位： c = (m + k) mod 26  例如密钥为 3 时，A→D、B→E、X→A，以此类推。
- 1.2解密原理
-将密文字母反向移动相同位数即可恢复明文： [ m = (c - k) \mod 26 ] 凯撒密码实现简单、运算高效，但安全性极低，仅能抵御简单的信息偷窥，通过频率分析或暴力枚举 25 种可能即可快速破解。它更
-      </article>
-    </div>
-  </div>
-</div>
-      <div class="post-wrapper">
-  <div class="post-wrap left" data-aos="fade-up">
-      <a class="post-link" href="/2026/03/21/My-First-Blog/" aria-label="我的第一篇博客" title="我的第一篇博客"></a>
-    <div class="post-cover left">
-          <img data-src="/images/banner.webp" data-sizes="auto" alt="我的第一篇博客" class="lazyload">
-    </div>
-    <div class="post-info">
-      <div class="post-meta">
-        <span><span class="icon-calendar"></span>2026-03-21</span>
-        <span><span class="icon-pencil"></span>189 words</span>
-        <span><span class="icon-clock"></span>1 min</span>
-      </div>
-      <h2 class="post-title">我的第一篇博客</h2>
-      <article class="post-article">
-           Hello World！👋
-终于搭建好了自己的博客，今天开始记录学习生活。
- 为什么写博客？
-写博客有几个原因：
-
-记录学习：把学到的知识整理成文字
-分享经验：帮助遇到同样问题的朋友
-督促自己：定期更新，保持学习习惯
-认识朋友：通过博客认识志同道合的人
-
- 博客写什么？
-我打算分享这些内容：
-
-📝 技术学习笔记
-💻 编程项目经验
-📚 读书心得体会
-🎯 生活感悟记录
-
- 第一个代码示例
-既然是技术博客，先来段代码吧：
-12345def greet(name):    &amp;quot;&amp;quot;&amp;quot;简单的问候函数&amp;quot;&amp;quot;&amp;quot;    return f&amp;quo
-      </article>
-    </div>
-  </div>
-</div>
-
-</section>
-        </div>
-        <footer id="footer" aria-label="Site footer">
-  <div style="width: 100%; overflow: hidden">
-    <div class="footer-line"></div>
-  </div>
-  <div id="footer-info">
-    <div>
-      <span class="icon-copyright"></span>
-        2020-2026
-        <span class="footer-info-sep rotate"></span>
-      bby
-    </div>
-      <div>
-        Powered by&nbsp;<a href="https://hexo.io/" rel="noopener nofollow noreferrer" target="_blank">Hexo</a>&nbsp;
-        Theme.<a href="https://github.com/D-Sketon/hexo-theme-reimu" rel="noopener nofollow noreferrer" target="_blank">Reimu</a>
-      </div>
-      <div>
-        <span class="icon-brush"></span>
-        6k
-        &nbsp;|&nbsp;
-        <span class="icon-coffee"></span>
-        00:32
-      </div>
-      <div>
-        <span class="icon-eye"></span>
-        <span id="busuanzi_container_site_pv">Number of visits&nbsp;<span id="busuanzi_value_site_pv"></span></span>
-        &nbsp;|&nbsp;
-        <span class="icon-user"></span>
-        <span id="busuanzi_container_site_uv">Number of visitors&nbsp;<span id="busuanzi_value_site_uv"></span></span>
-      </div>
-  </div>
-</footer>
-
-          <div class="sidebar-top">
-            <div class="sidebar-top-taichi rotate"></div>
-            <div class="arrow-up"></div>
-          </div>
-        <div id="mask" class="hide"></div>
-      </div>
-      <nav id="mobile-nav" aria-label="Mobile navigation">
-  <div class="sidebar-wrap">
-      <div class="sidebar-author">
-  <img data-src="/avatar/%E5%A4%B4%E5%83%8F.jpg" data-sizes="auto" alt="bby" class="lazyload">
-  <div class="sidebar-author-name">bby</div>
-  <div class="sidebar-description"></div>
-</div>
-<div class="sidebar-state">
-  <div class="sidebar-state-article">
-    <div>Post</div>
-    <div class="sidebar-state-number">5</div>
-  </div>
-  <div class="sidebar-state-category">
-    <div>Category</div>
-    <div class="sidebar-state-number">3</div>
-  </div>
-  <div class="sidebar-state-tag">
-    <div>Tag</div>
-    <div class="sidebar-state-number">13</div>
-  </div>
-</div>
-<div class="sidebar-social" >
-</div>
-<div class="sidebar-menu">
-      <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/" aria-label="Home"></a>
-          <div class="sidebar-menu-icon icon rotate">
-              &#xe62b;
-          </div>
-        <div class="sidebar-menu-link">Home</div>
-      </div>
-      <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/archives" aria-label="Archives"></a>
-          <div class="sidebar-menu-icon icon rotate">
-              &#xe62b;
-          </div>
-        <div class="sidebar-menu-link">Archives</div>
-      </div>
-      <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/about" aria-label="About"></a>
-          <div class="sidebar-menu-icon icon rotate">
-              &#xe62b;
-          </div>
-        <div class="sidebar-menu-link">About</div>
-      </div>
-      <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/friend" aria-label="Friend"></a>
-          <div class="sidebar-menu-icon icon rotate">
-              &#xe62b;
-          </div>
-        <div class="sidebar-menu-link">Friend</div>
-      </div>
-</div>
-
-  </div>
-</nav>
-
-    </div>
+      const theme = saveToLocal.get('theme')
     
-<script src="https://npm.webcache.cn/lazysizes@5.3.2/lazysizes.min.js" integrity="sha384-3gT&#x2F;vsepWkfz&#x2F;ff7PpWNUeMzeWoH3cDhm&#x2F;A8jM7ouoAK0&#x2F;fP&#x2F;9bcHHR5kHq2nf+e" crossorigin="anonymous"></script>
-
-
-<script src="https://npm.webcache.cn/clipboard@2.0.11/dist/clipboard.min.js" integrity="sha384-J08i8An&#x2F;QeARD9ExYpvphB8BsyOj3Gh2TSh1aLINKO3L0cMSH2dN3E22zFoXEi0Q" crossorigin="anonymous"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-  
-<script src="/js/aos.js"></script>
-
-  <script>
-    var aosInit = () => {
-      AOS.init({
-        duration: 1000,
-        easing: "ease",
-        once: true,
-        offset: 50,
-      });
-    };
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', aosInit);
-    } else {
-      aosInit();
-    }
-  </script>
-
-
-<script src="/js/pjax_script.js" data-pjax></script>
-
-
-
-
-  <script>
-    var setupFirework = () => {
-      if (!false || !window.matchMedia('(max-width: 768px)').matches) {
-        window.firework && window.firework(JSON.parse('{"excludeElements":["a","button"],"particles":[{"shape":"circle","move":["emit"],"easing":"easeOutExpo","colors":["var(--red-1)","var(--red-2)","var(--red-3)","var(--red-4)"],"number":20,"duration":[1200,1800],"shapeOptions":{"radius":[16,32],"alpha":[0.3,0.5]}},{"shape":"circle","move":["diffuse"],"easing":"easeOutExpo","colors":["var(--red-0)"],"number":1,"duration":[1200,1800],"shapeOptions":{"radius":20,"alpha":[0.2,0.5],"lineWidth":6}}]}'));
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
       }
     }
-  </script>
+    detectApple()
   
-<script src="https://npm.webcache.cn/mouse-firework@0.2.0/dist/index.umd.js" integrity="sha384-qi9WggRt19tv8Vc7pCHW3ulMNLwrn515zaLEWZjl1px07vz8+pUoWX8n1rgq282T" crossorigin="anonymous" onload="setupFirework()" defer></script>
-
-
-
-
-
-
-<div id="lazy-script">
-  <div>
-  </div>
-</div>
-
-
-  <script>
-    console.log(String.raw`%c 
- ______     ______     __     __    __     __  __    
-/\  == \   /\  ___\   /\ \   /\ "-./  \   /\ \/\ \   
-\ \  __<   \ \  __\   \ \ \  \ \ \-./\ \  \ \ \_\ \  
- \ \_\ \_\  \ \_____\  \ \_\  \ \_\ \ \_\  \ \_____\ 
-  \/_/ /_/   \/_____/   \/_/   \/_/  \/_/   \/_____/ 
-                                                  
-`,'color: #ff5252;')
-    console.log('%c Theme.Reimu v' + '1.12.3' + ' %c https://github.com/D-Sketon/hexo-theme-reimu ', 'color: white; background: #ff5252; padding:5px 0;', 'padding:4px;border:1px solid #ff5252;')
-  </script>
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'bby-blog',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><meta name="generator" content="Hexo 8.1.1"></head><body><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">bby-blog</span></a></span><div id="menus"></div></nav><div id="site-info"><h1 id="site-title">bby-blog</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2026/04/08/2026-04-08-DES%E5%8A%A0%E8%A7%A3%E5%AF%86%E5%8E%9F%E7%90%86/" title="DES加解密原理">DES加解密原理</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2026-04-08T04:00:00.000Z" title="Created 2026-04-08 12:00:00">2026-04-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/crypto/">crypto</a></span></div><div class="content">DES加密原理  需要注意的是，明文的分组长度需要为64位（8个字节），密钥长度为64位（56位有效位+8位奇偶校验位）。  加密过程简要概括就是： 明文(64位) → IP置换 → 16轮迭代 → $IP^{-1}$逆置换 → 密文(64位) F是轮函数，它的四个步骤包括：     步骤 操作 输入→输出 说明     1 扩展置换(E盒) 32位 → 48位 将右半部分扩展，使与48位子密钥对齐   2 与子密钥异或 48位 ⊕ 48位 将扩展后的结果与本轮子密钥按位异或   3 S盒替换 48位 → 32位 8个S盒并行，每个将6位压缩为4位（非线性核心）   4 P盒置换 32位 → 32位 对S盒输出进行重排，增加雪崩效应     解密原理DES最巧妙的设计之一在于：解密过程与加密过程完全相同，只需将16个子密钥的使用顺序反转即可。  加密子密钥顺序：K1, K2, …, K15, K16 解密子密钥顺序：K16, K15, …, K2, K1  加解密代码123456789101112131415161718192021222324252627282930313233...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2026/04/01/polarisctf/" title="polarisctf">polarisctf</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2026-04-01T02:00:00.000Z" title="Created 2026-04-01 10:00:00">2026-04-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/crypto-ctf/">crypto-ctf</a></span></div><div class="content">1.ez_login1.1解题思路在浏览器复制粘贴网址nc1.ctfplus.cn:20520进入,然后输入账号“admin”，密码“admin123”，就可以看到flag。 2.神秘学2.1题目代码123456789101112131415161718192021222324252627282930313233343536373839404142434445464748import sympyimport randomfrom Crypto.Util.number import *from secret import flag, cdef get_poly(k):    x,a,b = sympy.symbols(&#x27;x a b&#x27;)    poly = x**3 - a * x**2 + b * x - c-k*n    deriv1 = sympy.diff(poly, x)    a1 = random.randint(2**119,2**120)    b1 = random.randint(2**119,2**120)    x1 = random.r...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2026/03/31/2026-03-31-%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81%EF%BC%88%E4%BA%8C%EF%BC%89/" title="古典密码（二）">古典密码（二）</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2026-03-31T02:00:00.000Z" title="Created 2026-03-31 10:00:00">2026-03-31</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/crypto/">crypto</a></span></div><div class="content">1.维吉尼亚密码（Vigenère Cipher）维吉尼亚密码是一种经典的多表替换密码，通过一串密钥字母来循环控制每一位明文的移位长度，从而有效抵御简单的频率分析攻击。 1.1加密原理（1）选取一个密钥单词，将其循环扩展至与明文等长。（2）对每一位明文字母$m_i$和对应密钥字母$k_i$,加密公式为: c_i=(m_i+k_i)mod26 （3）字谜对应数值：A=0,B=1,…,Z=25 （4）最终将计算结果转回字母，得到密文 1.2解密原理解密是加密的逆过程，使用相同密钥，将移位反向： $m_i=(c_i-k_i)mod26$ 再转回字母即可恢复明文。 1.3特点 相比凯撒密码更安全，同一个明文字母会被加密成不同密文字母。 密钥越长，安全性越高。 可通过卡西斯基试验、重合指数法进行破解。  1.4加解密代码12345678910111213141516171819202122232425262728293031def vigenere(text, key, mode=&#x27;encrypt&#x27;):    &quot;&quot;&quot;维吉尼亚密码加解密   ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2026/03/29/2026-03-29-%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81%EF%BC%88%E4%B8%80%EF%BC%89/" title="古典密码（一）">古典密码（一）</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2026-03-29T14:55:00.000Z" title="Created 2026-03-29 22:55:00">2026-03-29</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/crypto/">crypto</a></span></div><div class="content">1.凯撒密码（Caesar Cipher） 凯撒密码是最经典的单字母移位替换密码，也是密码学入门的标志性算法。其核心思想是将明文中的每一个字母，按照字母表顺序统一向前或向后移动固定位数，从而形成密文。  1.1加密原理对于每个明文字母 m，按密钥 k（位移量）进行移位： c = (m + k) mod 26  例如密钥为 3 时，A→D、B→E、X→A，以此类推。  1.2解密原理将密文字母反向移动相同位数即可恢复明文： [ m = (c - k) \mod 26 ] 凯撒密码实现简单、运算高效，但安全性极低，仅能抵御简单的信息偷窥，通过频率分析或暴力枚举 25 种可能即可快速破解。它更多用于教学，帮助理解“替换密码”的基本思想。  1.3加解密代码1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253```&#123; def caesar_cipher(text, shift, mode=&#x27;encrypt&#x27;):    ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2026/03/21/My-First-Blog/" title="我的第一篇博客">我的第一篇博客</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2026-03-21T02:00:00.000Z" title="Created 2026-03-21 10:00:00">2026-03-21</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%94%9F%E6%B4%BB%E8%AE%B0%E5%BD%95/">生活记录</a></span></div><div class="content">Hello World！👋终于搭建好了自己的博客，今天开始记录学习生活。 为什么写博客？写博客有几个原因：  记录学习：把学到的知识整理成文字 分享经验：帮助遇到同样问题的朋友 督促自己：定期更新，保持学习习惯 认识朋友：通过博客认识志同道合的人  博客写什么？我打算分享这些内容：  📝 技术学习笔记 💻 编程项目经验   📚 读书心得体会 🎯 生活感悟记录  第一个代码示例既然是技术博客，先来段代码吧： 12345def greet(name):    &quot;&quot;&quot;简单的问候函数&quot;&quot;&quot;    return f&quot;Hello, &#123;name&#125;! Welcome to my blog.&quot;print(greet(&quot;读者&quot;)) </div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">bby</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">5</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">13</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/04/08/2026-04-08-DES%E5%8A%A0%E8%A7%A3%E5%AF%86%E5%8E%9F%E7%90%86/" title="DES加解密原理">DES加解密原理</a><time datetime="2026-04-08T04:00:00.000Z" title="Created 2026-04-08 12:00:00">2026-04-08</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/04/01/polarisctf/" title="polarisctf">polarisctf</a><time datetime="2026-04-01T02:00:00.000Z" title="Created 2026-04-01 10:00:00">2026-04-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/03/31/2026-03-31-%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81%EF%BC%88%E4%BA%8C%EF%BC%89/" title="古典密码（二）">古典密码（二）</a><time datetime="2026-03-31T02:00:00.000Z" title="Created 2026-03-31 10:00:00">2026-03-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/03/29/2026-03-29-%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81%EF%BC%88%E4%B8%80%EF%BC%89/" title="古典密码（一）">古典密码（一）</a><time datetime="2026-03-29T14:55:00.000Z" title="Created 2026-03-29 22:55:00">2026-03-29</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/03/21/My-First-Blog/" title="我的第一篇博客">我的第一篇博客</a><time datetime="2026-03-21T02:00:00.000Z" title="Created 2026-03-21 10:00:00">2026-03-21</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>Categories</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/crypto/"><span class="card-category-list-name">crypto</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/crypto-ctf/"><span class="card-category-list-name">crypto-ctf</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%94%9F%E6%B4%BB%E8%AE%B0%E5%BD%95/"><span class="card-category-list-name">生活记录</span><span class="card-category-list-count">1</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/%E5%BC%80%E7%AF%87/" style="font-size: 1.1em; color: #999">开篇</a> <a href="/tags/DES/" style="font-size: 1.1em; color: #999">DES</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 1.1em; color: #999">博客</a> <a href="/tags/%E4%BB%BF%E5%B0%84%E5%AF%86%E7%A0%81/" style="font-size: 1.1em; color: #999">仿射密码</a> <a href="/tags/%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81/" style="font-size: 1.5em; color: #99a9bf">古典密码</a> <a href="/tags/playfair%E5%AF%86%E7%A0%81/" style="font-size: 1.1em; color: #999">playfair密码</a> <a href="/tags/polarisctf/" style="font-size: 1.1em; color: #999">polarisctf</a> <a href="/tags/hill%E5%AF%86%E7%A0%81/" style="font-size: 1.1em; color: #999">hill密码</a> <a href="/tags/%E5%87%AF%E6%92%92%E5%AF%86%E7%A0%81/" style="font-size: 1.1em; color: #999">凯撒密码</a> <a href="/tags/%E6%96%AF%E5%B7%B4%E8%BE%BE%E5%AF%86%E7%A0%81/" style="font-size: 1.1em; color: #999">斯巴达密码</a> <a href="/tags/crypto/" style="font-size: 1.1em; color: #999">crypto</a> <a href="/tags/%E5%88%86%E7%BB%84%E5%AF%86%E7%A0%81/" style="font-size: 1.1em; color: #999">分组密码</a> <a href="/tags/%E7%BB%B4%E5%90%89%E5%B0%BC%E4%BA%9A%E5%AF%86%E7%A0%81/" style="font-size: 1.1em; color: #999">维吉尼亚密码</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>Archives</span>
+      
+    </div>
   
-
-
-  
-<script src="https://npm.webcache.cn/busuanzi@2.3.0/bsz.pure.mini.js" integrity="sha384-0M75wtSkhjIInv4coYlaJU83+OypaRCIq2SukQVQX04eGTCBXJDuWAbJet56id+S" crossorigin="anonymous" async></script>
-
-
-<script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.getRegistrations().then((registrations) => {
-      for (let registration of registrations) {
-        registration.unregister();
-      }
-    });
-  }
-</script>
-
-
-
-
-  </body>
-  </html>
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/04/">
+            <span class="card-archive-list-date">
+              April 2026
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/03/">
+            <span class="card-archive-list-date">
+              March 2026
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Website Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article Count :</div><div class="item-count">5</div></div><div class="webinfo-item"><div class="item-name">Unique Visitors :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Page Views :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-04-09T05:16:15.347Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By bby</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.4</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
